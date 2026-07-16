@@ -1,0 +1,601 @@
+disruption_id,shipment_id,disruption_type,severity,description,reported_date
+1,978,Supplier Delay,Low,Sapiente laudantium tempore tenetur deleniti doloremque.,2026-04-19
+2,3693,Transport Strike,Medium,Veritatis occaecati voluptatem eaque.,2026-02-13
+3,1403,Supplier Delay,High,Molestiae neque eius perspiciatis.,2026-07-05
+4,2151,Traffic,Medium,Odio id libero laborum ullam voluptatibus harum consequuntur.,2026-04-25
+5,1603,Machine Failure,High,Repudiandae omnis repellendus earum sapiente.,2026-06-05
+6,2224,Port Congestion,High,Ratione quas harum quibusdam.,2025-07-26
+7,1586,Transport Strike,Medium,Ab quod praesentium.,2025-11-21
+8,281,Port Congestion,Medium,Doloribus recusandae sit eveniet explicabo quisquam dolore.,2025-12-19
+9,3412,Transport Strike,Medium,Ea quam iure blanditiis eligendi facilis ullam.,2025-12-17
+10,2387,Weather,Medium,Quas omnis vel quam laudantium.,2025-10-10
+11,1613,Port Congestion,High,Exercitationem dolor quam optio repellat.,2025-09-14
+12,2776,Weather,High,Explicabo dolor eligendi a velit beatae nisi.,2026-02-01
+13,2224,Traffic,High,Est reiciendis fugiat excepturi.,2026-04-28
+14,651,Supplier Delay,Low,Blanditiis adipisci hic ipsam.,2025-07-25
+15,522,Machine Failure,High,Numquam facilis distinctio occaecati fuga rerum qui.,2026-04-10
+16,1707,Port Congestion,Medium,Voluptate nobis tempora at consectetur soluta ducimus similique.,2025-08-10
+17,1763,Machine Failure,Low,Non perspiciatis vel molestiae.,2025-09-17
+18,2895,Port Congestion,Low,Accusantium nostrum reiciendis ab rerum.,2026-01-23
+19,1128,Machine Failure,Low,Eaque labore veritatis rerum non corporis impedit facilis.,2025-11-30
+20,3348,Weather,Medium,Delectus mollitia veritatis consequatur esse mollitia quibusdam.,2026-05-05
+21,98,Machine Failure,Low,Cum dolore harum.,2025-10-06
+22,2431,Traffic,High,Assumenda distinctio corporis magni unde est at.,2025-11-03
+23,1945,Port Congestion,Medium,Ipsam officiis delectus ex autem saepe architecto.,2025-12-04
+24,714,Traffic,High,Animi quasi libero sit.,2026-03-12
+25,1095,Traffic,Low,Beatae consequuntur et quis repudiandae.,2025-12-12
+26,3633,Transport Strike,High,Officia vitae sint.,2025-11-13
+27,1069,Supplier Delay,High,Alias nam dolor possimus in necessitatibus.,2026-05-11
+28,215,Weather,Low,Temporibus dolorum natus animi reiciendis sunt.,2025-08-22
+29,889,Transport Strike,Low,Suscipit quo nihil facilis.,2026-05-20
+30,333,Supplier Delay,Medium,Totam aut nesciunt nesciunt veritatis.,2025-10-10
+31,1037,Traffic,Low,Possimus mollitia omnis voluptate.,2026-05-05
+32,3698,Machine Failure,Medium,Voluptates aut sequi enim repudiandae ut natus non.,2025-11-25
+33,1210,Supplier Delay,High,Necessitatibus blanditiis rem optio animi quae amet quae.,2025-10-01
+34,3933,Weather,Low,Repellendus odit voluptatum minus eaque excepturi quaerat tenetur.,2026-07-14
+35,3418,Weather,High,Vero eius esse sed cumque nesciunt tempore.,2026-02-12
+36,1284,Transport Strike,Low,Dicta dolor nulla iure vel corrupti dicta dolor.,2026-05-27
+37,2838,Port Congestion,Medium,Id adipisci labore quos ipsam.,2025-08-17
+38,3009,Port Congestion,Low,Cupiditate porro dolore repudiandae.,2026-01-17
+39,3609,Supplier Delay,High,Repudiandae nemo tempore provident veniam labore dolorum.,2025-11-13
+40,3106,Traffic,Low,Aliquid similique molestias velit accusamus quas.,2026-03-29
+41,1786,Traffic,Medium,Minima qui quisquam dolorem.,2025-09-17
+42,1446,Machine Failure,High,Cum eligendi earum quasi quis nobis beatae.,2025-09-08
+43,3830,Port Congestion,Medium,Officiis cumque nam quo perferendis pariatur unde.,2025-12-10
+44,3415,Transport Strike,High,Pariatur accusantium ducimus laborum quisquam modi.,2026-05-15
+45,3,Supplier Delay,High,Delectus quos voluptatum quas ducimus recusandae minus consectetur.,2026-05-10
+46,309,Machine Failure,Low,Beatae dignissimos illum totam voluptates nostrum amet.,2026-07-14
+47,2481,Machine Failure,Medium,Necessitatibus ducimus esse iusto veniam dolore.,2026-06-01
+48,1230,Transport Strike,High,Odio ex quia molestias quae numquam.,2025-08-24
+49,2037,Machine Failure,Low,Nisi nihil incidunt enim quis culpa.,2026-04-20
+50,2141,Machine Failure,Low,Impedit libero hic fugiat.,2025-09-01
+51,1406,Weather,High,Doloribus veritatis libero sed officia maxime facere.,2025-08-20
+52,1326,Weather,Medium,Ratione quis ipsum facilis vero repellendus.,2025-12-12
+53,3305,Port Congestion,High,Aut sit ipsa sequi inventore qui quasi.,2025-10-04
+54,2067,Transport Strike,Low,Ea iure neque nulla doloremque quidem.,2026-03-12
+55,1200,Weather,Medium,Rem eligendi laboriosam iusto animi cumque repellat.,2026-01-20
+56,3050,Weather,High,Dolores id aliquid.,2026-05-27
+57,1681,Port Congestion,Low,Laboriosam est nobis velit numquam architecto.,2025-12-15
+58,1428,Supplier Delay,High,Quo aut expedita repudiandae ullam eaque.,2026-07-08
+59,1813,Traffic,High,Dolorum veniam ullam quia fuga.,2026-04-24
+60,2947,Port Congestion,High,Tempora placeat aspernatur id laborum.,2025-08-19
+61,878,Weather,Medium,Vel voluptas ratione consequuntur enim.,2025-09-21
+62,1570,Supplier Delay,Low,Minus error repellendus sed molestiae amet.,2026-04-14
+63,60,Weather,High,Cumque deleniti laudantium eligendi quia.,2025-08-18
+64,1866,Port Congestion,Low,Nam fuga velit repellat.,2025-11-14
+65,1952,Machine Failure,High,Iste quos libero dicta.,2026-05-17
+66,3164,Supplier Delay,High,Tempore iure adipisci deleniti ex quis repellat.,2025-11-09
+67,1422,Weather,High,Sapiente corporis modi hic.,2026-02-24
+68,2670,Port Congestion,Low,Deleniti eveniet earum nemo in aperiam.,2025-09-08
+69,2852,Port Congestion,Medium,Harum aliquid officiis quasi ut.,2026-03-28
+70,3782,Supplier Delay,Medium,Id alias dolor aliquid eum corrupti ullam explicabo.,2025-08-16
+71,3891,Port Congestion,Low,Ex delectus voluptas explicabo odit.,2025-07-18
+72,2625,Machine Failure,High,Soluta ea doloribus illum.,2025-12-03
+73,1400,Traffic,High,Delectus molestias esse dolorum vitae sequi impedit.,2025-09-27
+74,1369,Port Congestion,Low,Iure harum distinctio atque alias.,2026-05-15
+75,2530,Port Congestion,High,Labore explicabo odio accusantium velit quae.,2026-03-07
+76,1904,Supplier Delay,High,Consectetur hic exercitationem nobis aspernatur.,2026-03-09
+77,2247,Weather,Medium,Et voluptatem repellendus iusto.,2025-10-13
+78,2228,Traffic,Low,Voluptatibus in natus quam eius.,2026-04-28
+79,1855,Weather,High,Facilis odit expedita libero.,2025-12-29
+80,2720,Transport Strike,High,Omnis culpa laboriosam culpa explicabo.,2025-12-05
+81,2397,Weather,Medium,Expedita totam amet hic pariatur.,2025-11-11
+82,2962,Traffic,Low,Fugit non facere necessitatibus repellendus.,2026-05-20
+83,3878,Machine Failure,Low,Harum culpa quis amet maxime dicta.,2026-04-29
+84,3415,Supplier Delay,High,Eveniet placeat ipsa.,2025-10-19
+85,3476,Port Congestion,High,Aliquam enim est voluptas eius.,2025-11-03
+86,1092,Weather,Low,Molestias delectus sint hic.,2026-03-13
+87,3226,Supplier Delay,High,Amet unde aut animi corporis quaerat.,2026-07-13
+88,3398,Traffic,Medium,Minima porro praesentium rerum adipisci nemo sed.,2026-01-29
+89,1516,Supplier Delay,Low,Non blanditiis aliquid doloribus tempora enim.,2025-11-25
+90,1676,Traffic,High,Ducimus enim ullam nostrum atque.,2025-07-28
+91,2734,Machine Failure,Medium,Similique ex praesentium accusantium ex quae.,2025-11-26
+92,1431,Transport Strike,High,Beatae minima hic.,2026-04-20
+93,1861,Machine Failure,Low,Eius recusandae architecto odio sit.,2026-06-18
+94,1558,Traffic,Low,Dignissimos voluptatibus ad expedita vero.,2026-07-05
+95,1851,Traffic,High,Soluta numquam at ipsa voluptates.,2026-06-22
+96,1603,Port Congestion,Medium,Placeat autem fugit pariatur impedit delectus voluptatum.,2025-10-23
+97,3642,Transport Strike,High,Eius quod ex.,2026-05-01
+98,2054,Port Congestion,Low,Adipisci architecto numquam animi aliquid.,2025-12-18
+99,937,Machine Failure,High,Tenetur eligendi sequi alias mollitia itaque id at.,2025-09-05
+100,3257,Traffic,Medium,Doloremque facilis reprehenderit iure ad necessitatibus.,2025-12-27
+101,3264,Traffic,Low,Voluptates amet ex libero ullam quos.,2026-06-16
+102,1141,Machine Failure,High,Tempore provident officiis molestiae sequi.,2025-12-13
+103,2978,Traffic,Medium,Est ab excepturi ipsa.,2025-11-10
+104,3283,Traffic,Medium,Ad corporis quae quo ipsum.,2025-10-27
+105,3999,Port Congestion,Medium,Tempore nulla aspernatur quos corrupti ipsa in.,2026-03-09
+106,2174,Machine Failure,Medium,Cupiditate aliquam laboriosam provident temporibus harum blanditiis nisi.,2025-08-12
+107,1728,Transport Strike,Medium,Deserunt cumque fugit delectus.,2026-05-31
+108,1256,Supplier Delay,High,Enim dolor impedit adipisci.,2026-05-29
+109,1378,Traffic,High,Nobis recusandae qui in necessitatibus.,2026-01-30
+110,77,Machine Failure,High,Inventore consequuntur explicabo sed dolorum.,2025-09-19
+111,3401,Weather,High,In eligendi ea consectetur aliquam architecto atque.,2025-12-02
+112,3327,Supplier Delay,High,Inventore praesentium placeat.,2026-04-10
+113,1209,Supplier Delay,High,Vero dicta veritatis autem.,2025-09-09
+114,2762,Supplier Delay,Low,Itaque id officiis aperiam.,2025-08-08
+115,2021,Machine Failure,Low,Omnis ea maiores accusamus labore necessitatibus.,2026-03-28
+116,1960,Machine Failure,Medium,Veritatis temporibus voluptatibus porro.,2025-12-13
+117,3836,Traffic,Low,Illo quas officia quam eius.,2026-02-15
+118,2934,Supplier Delay,Low,Rem cupiditate cumque soluta temporibus.,2026-05-10
+119,2973,Weather,High,Unde et eveniet porro odio fugiat dolor.,2026-07-13
+120,1056,Transport Strike,High,Voluptas iusto nihil id error neque.,2026-03-05
+121,390,Weather,Medium,Temporibus ea repellendus.,2025-07-24
+122,2912,Port Congestion,Low,Explicabo doloremque neque alias dolore.,2025-12-29
+123,1284,Machine Failure,High,Corporis aut excepturi cupiditate saepe tempora.,2025-12-17
+124,1890,Transport Strike,High,Animi fugiat officiis at odit sapiente.,2025-11-16
+125,168,Machine Failure,Low,Provident tenetur in vel et nihil.,2025-08-29
+126,240,Weather,Medium,Ea officia odio ipsa.,2025-08-19
+127,3978,Transport Strike,Medium,Delectus impedit commodi facere.,2025-10-31
+128,1333,Transport Strike,High,Adipisci animi facere distinctio.,2025-11-05
+129,3073,Traffic,Low,Numquam tenetur exercitationem.,2026-04-18
+130,401,Port Congestion,Medium,Nihil sapiente numquam.,2026-06-29
+131,3742,Port Congestion,High,Nihil ipsam corrupti in accusamus officia cum.,2025-08-07
+132,1373,Weather,Low,Aliquid animi aperiam autem ratione molestias omnis.,2026-06-26
+133,2113,Port Congestion,Medium,Recusandae aspernatur voluptatum architecto est voluptas.,2025-12-19
+134,3595,Weather,Low,Maxime eius vero officia.,2026-04-25
+135,2933,Weather,High,Molestias itaque magnam quos corrupti perspiciatis quo.,2026-03-06
+136,3157,Machine Failure,Low,Modi eius ex molestiae numquam.,2026-06-15
+137,3164,Transport Strike,High,Possimus culpa modi fugiat.,2025-09-13
+138,979,Port Congestion,Low,Veritatis iure quia odit itaque hic similique iusto.,2026-05-13
+139,845,Machine Failure,Medium,Culpa aut accusamus excepturi optio.,2025-09-05
+140,3033,Supplier Delay,Medium,Velit architecto odit omnis nulla vero.,2026-04-29
+141,2682,Port Congestion,Low,Perferendis a maiores nesciunt repudiandae consequuntur minus omnis.,2026-01-17
+142,872,Transport Strike,High,Ea reprehenderit reiciendis a.,2026-01-09
+143,51,Weather,Low,Molestias doloremque sed sint.,2026-06-21
+144,3118,Port Congestion,Low,Saepe fugit eligendi optio.,2025-10-11
+145,3185,Traffic,Medium,Architecto molestiae nobis molestias.,2025-11-02
+146,2993,Supplier Delay,Low,Illo officia cumque quas sequi iusto.,2025-10-20
+147,206,Transport Strike,High,Labore cum magnam modi nobis illo praesentium.,2025-10-13
+148,2969,Traffic,Medium,Illo reiciendis qui eum sed unde harum.,2026-06-05
+149,1850,Port Congestion,High,Minima molestiae doloremque itaque.,2026-01-28
+150,3534,Transport Strike,Low,Odit laboriosam ea odit.,2025-11-25
+151,2328,Weather,Medium,Earum placeat error at.,2025-10-12
+152,66,Machine Failure,High,Ducimus suscipit aperiam quasi expedita.,2026-01-04
+153,2877,Transport Strike,High,Consectetur temporibus vero dolore non vel.,2025-08-03
+154,2430,Traffic,Low,Tempore mollitia earum.,2025-08-06
+155,3801,Port Congestion,High,Voluptas tempora laboriosam et architecto maiores consequuntur eaque.,2025-10-28
+156,3011,Traffic,Medium,Beatae et eligendi accusantium quisquam debitis nihil.,2025-07-31
+157,3624,Traffic,Medium,Ad corrupti sit eligendi magni ipsam.,2026-06-08
+158,2417,Weather,Low,Sed accusamus repellat nisi incidunt fuga pariatur laborum.,2025-12-10
+159,825,Weather,Low,Nisi aliquam harum sed qui dolore veniam ratione.,2025-09-12
+160,2362,Machine Failure,Low,Eos quia ea corrupti ut laboriosam similique in.,2025-09-18
+161,1250,Transport Strike,Medium,Debitis neque est quisquam optio fugiat.,2025-09-20
+162,3622,Transport Strike,High,Ab totam commodi iure placeat.,2026-01-16
+163,127,Transport Strike,Medium,Consequuntur doloremque incidunt ad eligendi deleniti aliquam.,2025-12-21
+164,2511,Transport Strike,Low,Molestiae facere fuga exercitationem magnam a.,2025-08-06
+165,2663,Traffic,High,Dolorem accusamus alias nulla dolorum aperiam.,2025-10-16
+166,2245,Transport Strike,Low,Nostrum aspernatur atque magni.,2025-08-10
+167,2816,Supplier Delay,Medium,Vero repellendus quod est minus possimus et dolore.,2025-08-31
+168,990,Port Congestion,Low,Accusamus quis sint pariatur quo.,2026-04-12
+169,232,Supplier Delay,Low,Eum facilis eum explicabo est quis dignissimos.,2025-10-09
+170,1730,Transport Strike,High,Praesentium quam quod nostrum unde perferendis.,2026-05-15
+171,3187,Port Congestion,Low,Error blanditiis voluptatibus ipsum asperiores.,2026-04-30
+172,643,Machine Failure,High,In nostrum dolorem minus non.,2026-01-04
+173,576,Weather,High,Aperiam eum porro similique ut ipsum exercitationem.,2026-05-04
+174,1241,Supplier Delay,High,Eius illum quibusdam quibusdam.,2026-04-20
+175,2208,Weather,High,Illo excepturi pariatur dolores fugit.,2025-11-18
+176,3522,Port Congestion,Low,Molestiae alias a iusto voluptate quaerat accusantium.,2026-07-13
+177,2756,Weather,Medium,Molestias deleniti nam sequi.,2026-04-18
+178,985,Port Congestion,High,Earum blanditiis alias sed maxime.,2025-12-24
+179,1301,Machine Failure,High,Reprehenderit aliquid maiores eius.,2025-11-30
+180,2740,Machine Failure,High,Quam quod velit corrupti numquam quisquam corrupti.,2025-10-01
+181,2874,Port Congestion,Low,Blanditiis labore voluptas id repellat tenetur aliquam.,2025-08-02
+182,318,Supplier Delay,Low,Cupiditate laboriosam quasi maiores.,2025-11-06
+183,2629,Machine Failure,Low,Tempora cum cumque sunt ullam.,2026-03-02
+184,1304,Weather,Medium,Voluptates laudantium beatae rerum.,2026-02-25
+185,835,Machine Failure,High,Veritatis enim quaerat a amet.,2026-07-01
+186,3072,Transport Strike,High,Perspiciatis illum rem consequatur iure quae eos.,2026-05-29
+187,1428,Machine Failure,High,Non ipsa reiciendis doloribus provident.,2026-06-23
+188,1876,Supplier Delay,Medium,Ipsa natus et eius ullam.,2025-11-16
+189,3263,Supplier Delay,Low,Minima quam id rem inventore.,2026-07-09
+190,1151,Port Congestion,Low,Recusandae explicabo rem quod itaque possimus dignissimos voluptas.,2025-09-02
+191,1950,Machine Failure,Low,Cumque odit saepe totam sequi ullam voluptatum.,2025-09-05
+192,3132,Supplier Delay,High,Assumenda aliquam sit odit.,2025-10-05
+193,358,Weather,High,Amet cumque esse.,2025-09-28
+194,2742,Machine Failure,High,Aspernatur culpa quisquam eius ipsum ut.,2025-11-03
+195,308,Weather,Medium,Sint recusandae in officia dolorum molestias.,2025-11-12
+196,1172,Supplier Delay,High,Provident dolorum minima optio fugiat temporibus.,2025-10-31
+197,1669,Traffic,Low,Quaerat accusantium veritatis asperiores.,2026-06-09
+198,1852,Port Congestion,Low,Tenetur doloribus dignissimos doloribus nihil fuga quo tempore.,2025-08-29
+199,861,Transport Strike,Medium,Omnis libero neque soluta necessitatibus.,2026-06-02
+200,1140,Port Congestion,Low,Repellat enim vero magni esse asperiores.,2025-12-14
+201,2975,Port Congestion,High,Recusandae natus distinctio deserunt.,2025-10-06
+202,1539,Traffic,High,Tempora accusamus officiis fugiat nulla.,2025-12-11
+203,3583,Traffic,High,In est delectus odit dicta sunt totam.,2025-10-09
+204,3169,Machine Failure,Low,Voluptates quos aut assumenda.,2026-02-01
+205,3649,Traffic,Medium,Minima nemo consequatur blanditiis rerum odio magni.,2026-02-10
+206,2106,Machine Failure,High,Totam tempore maiores inventore.,2025-09-19
+207,3472,Transport Strike,Low,Iusto ut fugiat.,2025-08-26
+208,1180,Transport Strike,High,Culpa a debitis at commodi reprehenderit.,2025-11-03
+209,1819,Weather,Medium,Optio incidunt corrupti dolores consequuntur excepturi praesentium.,2025-12-20
+210,1563,Port Congestion,Low,Beatae reprehenderit fugit sapiente praesentium libero.,2025-11-15
+211,790,Supplier Delay,High,Rem cumque culpa.,2026-06-24
+212,1496,Supplier Delay,Medium,Consectetur minima cupiditate delectus perferendis tempora.,2025-10-15
+213,3625,Traffic,Medium,Officiis perspiciatis enim vel.,2025-08-06
+214,876,Port Congestion,High,Explicabo quo hic veniam impedit aliquam fugiat quasi.,2026-04-21
+215,3918,Traffic,Low,Eaque officia dolores voluptatem.,2026-03-22
+216,1009,Weather,Low,Perspiciatis asperiores esse suscipit voluptates culpa eligendi.,2025-11-20
+217,274,Supplier Delay,High,Illum tempora cumque quos possimus.,2026-05-28
+218,178,Traffic,High,Odit voluptatibus eaque vero quos pariatur.,2025-11-03
+219,3531,Supplier Delay,Medium,Dolorem vel enim cum.,2026-03-15
+220,1040,Transport Strike,High,Aspernatur illo eius aut.,2025-11-30
+221,1289,Machine Failure,High,Voluptate hic a sequi alias.,2026-05-13
+222,641,Traffic,Low,Earum eius culpa magnam cum eius dolore.,2025-12-08
+223,3849,Weather,High,Perspiciatis laudantium sapiente.,2025-11-05
+224,2720,Machine Failure,Medium,Eaque asperiores rerum expedita.,2026-05-03
+225,2787,Supplier Delay,Low,Tempore veritatis quibusdam officia eveniet dicta veritatis.,2026-03-14
+226,2181,Supplier Delay,High,Assumenda ex dignissimos eius.,2026-01-05
+227,2097,Weather,Low,Dolorum consequatur dolorum quam eius repudiandae voluptatum.,2025-10-21
+228,2222,Traffic,Low,Quisquam corrupti earum sapiente minus sed fugiat nihil.,2026-01-22
+229,886,Transport Strike,Medium,Nihil consequuntur non quod asperiores nostrum similique at.,2026-01-28
+230,975,Machine Failure,Low,Tempora earum accusantium eos dolore dolores sunt.,2026-03-24
+231,1663,Weather,High,Corporis expedita officia consequuntur omnis aliquid aspernatur.,2025-12-02
+232,508,Transport Strike,Low,Quisquam aliquid aperiam.,2026-06-06
+233,988,Supplier Delay,Medium,Ducimus nobis porro quo accusamus reiciendis sequi eum.,2025-12-19
+234,2565,Supplier Delay,High,Fugiat incidunt nobis eligendi eius ad.,2025-11-23
+235,1359,Machine Failure,Medium,Non molestias sint explicabo.,2025-11-19
+236,839,Weather,High,Vero delectus cupiditate.,2026-01-04
+237,162,Supplier Delay,Medium,Quasi debitis molestiae quasi pariatur.,2025-11-03
+238,3596,Port Congestion,Medium,Vitae perspiciatis cupiditate perferendis molestias ipsam culpa.,2025-08-30
+239,1372,Weather,Medium,Tempora odio nihil laboriosam.,2026-01-07
+240,429,Traffic,High,Facere sunt quaerat nulla laudantium.,2026-05-27
+241,1821,Port Congestion,High,Molestias accusantium exercitationem sit blanditiis in.,2026-02-21
+242,689,Supplier Delay,Medium,Laborum tempora laudantium nisi at perferendis vel minima.,2025-09-07
+243,725,Weather,Low,Aliquid molestiae tempora quisquam illo nam quos suscipit.,2025-11-23
+244,2282,Traffic,Low,Quo inventore quod quisquam commodi.,2025-11-06
+245,2925,Transport Strike,Low,Architecto nam ut.,2026-03-27
+246,955,Weather,High,Nulla quisquam at corrupti numquam aspernatur.,2025-08-06
+247,3776,Traffic,Low,Et adipisci amet delectus voluptatem mollitia nihil.,2026-07-11
+248,3510,Supplier Delay,Low,Aut voluptas rem eaque nobis dolor.,2025-09-24
+249,2576,Supplier Delay,Low,Cum repudiandae rem.,2026-06-13
+250,3701,Port Congestion,High,Ipsum dignissimos inventore.,2025-11-05
+251,3419,Machine Failure,Medium,Modi necessitatibus non.,2026-02-24
+252,667,Traffic,Low,Impedit ullam magnam vel enim explicabo.,2026-02-01
+253,2694,Machine Failure,Low,Fuga aspernatur aperiam hic.,2025-08-08
+254,1772,Weather,Medium,Corrupti magni velit delectus aut dolore.,2025-09-05
+255,446,Traffic,Medium,Voluptatem temporibus deserunt fugiat pariatur.,2026-01-01
+256,451,Weather,Low,Magni placeat corporis.,2026-02-22
+257,1955,Transport Strike,Medium,Distinctio quisquam quaerat reiciendis voluptatum esse architecto.,2025-10-24
+258,3149,Traffic,High,Id voluptatum nobis aliquid neque id asperiores.,2026-02-20
+259,3881,Traffic,High,Voluptas quis numquam soluta tenetur.,2026-02-13
+260,3251,Weather,Medium,Ullam quis hic quae voluptate tenetur error nisi.,2025-07-16
+261,1281,Supplier Delay,High,Laborum animi quo ipsa impedit.,2026-04-28
+262,2168,Supplier Delay,High,Voluptatem porro temporibus numquam tempora tempore.,2026-05-21
+263,3184,Transport Strike,High,Alias blanditiis cum voluptatem reiciendis itaque.,2025-10-09
+264,784,Weather,Medium,Nisi ad iste porro error.,2025-10-10
+265,2506,Supplier Delay,High,Rerum placeat similique error ipsum vitae.,2026-06-19
+266,2902,Machine Failure,High,Et ab quam eos eius in quasi.,2026-03-02
+267,1228,Traffic,Low,A incidunt debitis unde.,2025-07-20
+268,552,Port Congestion,Medium,Quas odio a ut cumque doloremque est.,2025-11-04
+269,65,Supplier Delay,Low,Saepe numquam pariatur est natus ad.,2026-01-16
+270,2457,Supplier Delay,High,In fugiat distinctio quae laudantium modi doloribus alias.,2025-11-05
+271,1121,Weather,Medium,Autem aliquid natus sapiente quod maiores tempore non.,2025-08-05
+272,2089,Transport Strike,Low,Perferendis dolor sunt quas magni.,2026-04-08
+273,1949,Supplier Delay,Medium,Quibusdam ea cum quam doloremque cum.,2025-11-07
+274,1243,Weather,Low,Officia harum eum.,2026-04-12
+275,197,Port Congestion,Low,Temporibus quam nemo doloribus molestiae delectus amet.,2026-01-06
+276,494,Machine Failure,Medium,Commodi rem voluptas autem atque.,2025-10-04
+277,2512,Transport Strike,Medium,Neque dicta qui fugit itaque neque.,2026-04-10
+278,3674,Machine Failure,High,Veniam consequatur aspernatur voluptatem.,2025-11-20
+279,3550,Supplier Delay,Medium,Adipisci commodi qui fugiat doloremque molestias dolore.,2026-02-08
+280,1742,Weather,Low,Rem nemo minima delectus.,2025-10-18
+281,1517,Transport Strike,High,Alias at expedita.,2025-10-08
+282,393,Port Congestion,Low,Laboriosam ullam modi magni ut soluta.,2025-08-29
+283,2618,Supplier Delay,Medium,Aliquam corporis quod sapiente aperiam dolorem.,2025-11-10
+284,1846,Port Congestion,Medium,Ea velit iste consequatur mollitia ducimus consequatur.,2026-06-12
+285,254,Port Congestion,High,Enim sequi pariatur.,2025-11-26
+286,87,Traffic,Low,Sit officia perspiciatis doloribus a.,2025-08-30
+287,3002,Weather,Low,Praesentium atque alias repellendus illo cum quasi.,2025-11-26
+288,904,Port Congestion,High,Unde a veritatis facere beatae odit tenetur sint.,2025-09-21
+289,1890,Weather,Low,Reiciendis rerum est itaque corrupti.,2026-03-07
+290,1674,Weather,High,Dolore dolores eligendi amet reprehenderit velit similique.,2026-03-27
+291,1711,Supplier Delay,High,Voluptate a libero commodi quod.,2026-04-19
+292,1738,Supplier Delay,Low,Ad ut incidunt quis ea.,2026-04-15
+293,1830,Weather,High,Inventore ad vel nihil saepe dolorem error corrupti.,2026-02-15
+294,3954,Traffic,High,Id culpa repellendus dolores magni.,2026-06-24
+295,1430,Port Congestion,High,Eveniet autem excepturi ullam ex dolorum quis.,2026-06-11
+296,3246,Port Congestion,Medium,Harum atque qui dolorum.,2025-07-21
+297,703,Traffic,Medium,Dolorum impedit ipsa commodi autem laborum voluptatum.,2025-09-30
+298,2511,Port Congestion,Medium,Provident deserunt officia molestias quaerat tenetur similique labore.,2026-02-06
+299,3165,Traffic,High,Culpa soluta quasi temporibus.,2026-05-18
+300,1633,Machine Failure,Low,Itaque enim beatae repudiandae consequatur nihil.,2026-02-23
+301,2158,Weather,Medium,Consectetur architecto nostrum reprehenderit.,2026-01-01
+302,425,Supplier Delay,Medium,Numquam vel ipsum laudantium illo.,2026-06-07
+303,1212,Machine Failure,Medium,Minima ipsam porro illum ad.,2026-01-26
+304,1208,Supplier Delay,Medium,Nostrum eius ab vitae necessitatibus hic.,2026-01-27
+305,1971,Supplier Delay,Medium,Culpa hic officia reiciendis cumque ex eos repudiandae.,2026-03-10
+306,1362,Weather,Low,Ut exercitationem molestiae animi dolor ab facere.,2026-01-13
+307,1920,Machine Failure,Low,Maxime excepturi tempore debitis facere illum rerum.,2026-04-03
+308,1326,Traffic,Low,Perspiciatis rem dicta sit beatae quisquam.,2026-05-28
+309,3214,Traffic,Low,Debitis odit dignissimos sapiente.,2026-05-19
+310,2832,Weather,Medium,Nisi modi magnam earum saepe illum maxime.,2025-09-30
+311,695,Transport Strike,Low,Numquam earum quaerat nesciunt soluta.,2026-04-24
+312,3001,Traffic,Low,Maiores placeat et sunt similique occaecati.,2025-12-21
+313,608,Transport Strike,Medium,Quia dolores non blanditiis modi.,2025-12-26
+314,63,Port Congestion,Medium,Labore consectetur blanditiis commodi.,2025-07-18
+315,903,Traffic,Low,Ducimus non soluta illum nam.,2026-06-13
+316,537,Port Congestion,Low,Eligendi quis consectetur provident quas commodi.,2025-08-08
+317,2305,Port Congestion,High,Sint quod nulla cumque molestiae tempora delectus.,2026-05-26
+318,2287,Port Congestion,Medium,Tenetur sequi nulla aspernatur.,2025-08-09
+319,1417,Weather,High,Alias sint nobis et fuga id magni officia.,2025-11-13
+320,2115,Transport Strike,Low,Molestias ut maxime aliquam.,2025-11-06
+321,2999,Port Congestion,Medium,Exercitationem aperiam ea aspernatur consectetur modi repellat.,2025-09-08
+322,2725,Weather,Low,Veritatis rem molestias laudantium illum earum.,2025-08-08
+323,2239,Supplier Delay,Low,Facere alias eius accusantium mollitia.,2025-12-12
+324,426,Port Congestion,High,Ratione laboriosam magni.,2025-07-27
+325,1141,Traffic,Medium,Hic deleniti expedita quo.,2026-07-02
+326,1151,Machine Failure,Low,Explicabo voluptas reprehenderit.,2025-10-29
+327,313,Port Congestion,Medium,Dolore occaecati dolores sapiente.,2026-04-08
+328,1264,Traffic,Medium,Aliquid quibusdam laudantium et.,2025-12-16
+329,3314,Supplier Delay,Medium,Corporis maxime atque hic sequi.,2026-04-04
+330,3981,Transport Strike,High,Expedita nam deleniti animi quam sed.,2026-07-03
+331,1031,Traffic,High,Laborum nihil hic corrupti doloribus corporis.,2025-11-09
+332,3170,Port Congestion,Medium,Nulla rem quia eos autem perferendis.,2026-04-13
+333,3341,Supplier Delay,High,Debitis illo eum perspiciatis esse iure asperiores.,2025-12-20
+334,2205,Supplier Delay,Low,Rerum pariatur cumque iusto veniam assumenda fugit optio.,2026-01-03
+335,3523,Port Congestion,High,Voluptates sit quidem itaque iusto quod.,2025-10-27
+336,3424,Transport Strike,Medium,Dolorum ex dolorum quisquam excepturi quaerat.,2025-12-21
+337,3895,Port Congestion,Medium,Tempore voluptatem quos eaque perferendis rerum.,2025-10-24
+338,713,Machine Failure,Low,Aliquam a soluta fugit ducimus amet porro voluptates.,2026-07-09
+339,937,Weather,High,Vel dolorum voluptate vel molestiae quidem quod commodi.,2026-02-19
+340,267,Machine Failure,High,Inventore debitis ullam quas illo magni.,2026-02-13
+341,1717,Port Congestion,High,Quod quod harum eos itaque ipsam saepe.,2025-11-05
+342,3150,Traffic,Medium,Exercitationem voluptas architecto.,2025-12-26
+343,3441,Machine Failure,High,Vel officia velit a.,2025-12-06
+344,3262,Port Congestion,Medium,Cumque quis dolorem dicta.,2026-07-01
+345,2932,Traffic,Medium,Molestiae quod fuga eius.,2025-12-05
+346,1258,Transport Strike,High,Odit autem enim distinctio culpa similique.,2025-08-23
+347,3857,Weather,High,Aperiam earum aut libero sequi quasi.,2026-05-20
+348,311,Supplier Delay,High,Labore eaque architecto maxime placeat.,2026-02-20
+349,1059,Transport Strike,High,Provident magnam quae corrupti sapiente.,2026-02-16
+350,1208,Machine Failure,Low,Dolor sequi incidunt quasi.,2025-10-25
+351,559,Machine Failure,Low,Minus ex est doloribus dignissimos recusandae vitae velit.,2026-05-03
+352,2659,Supplier Delay,Low,Porro perferendis minima vitae quisquam.,2025-11-25
+353,1730,Supplier Delay,High,Minima deleniti aperiam.,2025-10-27
+354,3216,Machine Failure,Low,Amet explicabo iste minima qui blanditiis labore eveniet.,2026-06-15
+355,2884,Transport Strike,Medium,Cumque magni suscipit debitis nostrum possimus culpa.,2026-02-11
+356,505,Machine Failure,Low,Consequuntur aliquid aut iste molestias ut.,2025-12-03
+357,12,Traffic,High,Eaque doloremque officia impedit molestiae.,2025-07-19
+358,1969,Traffic,High,Cumque id voluptatibus explicabo dolorum totam dolore.,2025-07-21
+359,1347,Transport Strike,Low,Aut rerum earum beatae ipsam.,2025-10-04
+360,923,Machine Failure,High,Praesentium possimus neque eius.,2025-08-01
+361,3776,Traffic,Low,Vitae tempora sapiente nam in.,2025-12-10
+362,411,Port Congestion,Low,Debitis inventore beatae dolor rem cupiditate.,2025-12-20
+363,1351,Traffic,Low,Recusandae excepturi quia illo iste fugit tempora.,2025-10-21
+364,1490,Machine Failure,Low,Hic cumque fuga libero eaque pariatur.,2026-01-09
+365,1981,Transport Strike,Medium,Nostrum cumque fugiat aliquam.,2026-06-01
+366,1149,Machine Failure,High,Cupiditate veniam magni fugiat dicta laboriosam laborum quod.,2026-06-22
+367,2804,Port Congestion,Low,Neque voluptatem ex dicta.,2026-01-18
+368,775,Supplier Delay,Low,Pariatur rerum ab aperiam.,2025-12-25
+369,3519,Traffic,High,Ullam officiis veritatis libero libero est pariatur ipsa.,2026-05-16
+370,1657,Machine Failure,High,Inventore sapiente praesentium enim placeat odio fugit dolores.,2026-03-03
+371,2059,Weather,High,Libero quod molestiae minima rem earum.,2025-08-26
+372,1705,Transport Strike,Low,Sequi quo eveniet nihil.,2025-08-27
+373,2372,Machine Failure,Medium,Ut nulla tenetur optio similique maiores.,2025-09-28
+374,1749,Traffic,High,Eos voluptas perspiciatis neque.,2026-06-01
+375,3765,Weather,Low,Porro voluptatum sunt commodi maiores.,2026-03-01
+376,148,Traffic,Low,In sunt ex.,2026-03-14
+377,166,Traffic,Low,Quia reiciendis veniam et cumque sapiente.,2026-03-02
+378,3553,Transport Strike,Low,Possimus soluta distinctio incidunt incidunt.,2025-12-19
+379,3465,Port Congestion,High,Sunt pariatur animi maiores sint natus voluptatibus.,2025-10-26
+380,888,Machine Failure,Medium,Libero ipsa dignissimos delectus fugit eaque dolore quod.,2025-10-31
+381,158,Port Congestion,Low,Laudantium esse pariatur ab.,2025-10-18
+382,1580,Supplier Delay,Medium,Reiciendis laborum veritatis enim illo officia reiciendis.,2026-06-24
+383,3031,Port Congestion,Medium,Enim ex aspernatur expedita.,2025-08-17
+384,2493,Supplier Delay,Medium,Nihil officiis ex nisi ipsam.,2026-03-25
+385,1932,Port Congestion,Medium,Unde ipsum voluptates blanditiis sapiente alias.,2026-07-11
+386,109,Supplier Delay,Medium,Iste officia laboriosam assumenda natus in voluptatum.,2026-01-03
+387,1301,Traffic,Medium,Quaerat aliquid fugit.,2025-08-15
+388,1082,Transport Strike,Medium,Natus atque et laboriosam quasi.,2026-03-10
+389,357,Supplier Delay,Low,Dolorem officiis atque totam eos odio dolore iusto.,2026-01-16
+390,645,Machine Failure,Low,Cumque soluta sapiente reiciendis odit exercitationem.,2026-06-24
+391,2584,Transport Strike,Low,Vitae ducimus iusto veritatis eaque praesentium eveniet.,2026-04-16
+392,2887,Traffic,High,Impedit quo et praesentium facere error ullam doloremque.,2026-07-05
+393,1714,Supplier Delay,High,Minus labore modi quibusdam vero quae.,2026-04-27
+394,953,Weather,Low,Repellendus dolore cupiditate voluptas minima exercitationem.,2026-01-06
+395,1057,Supplier Delay,High,Officiis dolore facilis porro quo.,2026-01-28
+396,2177,Port Congestion,Low,Cum non accusamus odio illum eius beatae voluptate.,2026-03-24
+397,3355,Transport Strike,Medium,Porro quaerat facere doloremque.,2026-02-25
+398,943,Transport Strike,High,Dignissimos earum nisi libero voluptas accusantium.,2025-11-13
+399,2994,Port Congestion,Medium,Enim velit id perspiciatis commodi.,2025-11-13
+400,3604,Machine Failure,Medium,Doloribus harum eveniet autem provident praesentium.,2026-01-17
+401,3521,Port Congestion,Low,Animi esse natus eligendi consequuntur quisquam.,2026-01-21
+402,1901,Weather,Medium,Neque repellat consequatur consequatur.,2026-04-23
+403,1077,Traffic,High,Harum voluptas sed nemo.,2026-03-14
+404,501,Weather,Medium,Minus voluptatem assumenda delectus.,2025-09-13
+405,1672,Transport Strike,Medium,Aspernatur quae tempore quaerat.,2026-03-05
+406,1964,Transport Strike,Medium,Laudantium animi error blanditiis eligendi nisi.,2026-03-29
+407,327,Weather,Medium,Eveniet cumque reiciendis sapiente tenetur praesentium officiis.,2026-06-23
+408,238,Supplier Delay,High,Ab eveniet in debitis quasi rem consequuntur.,2026-05-13
+409,1462,Transport Strike,Low,Quos nihil quam necessitatibus sunt eaque.,2025-09-10
+410,1524,Supplier Delay,Low,Quos molestias ipsum.,2025-08-18
+411,3203,Weather,Low,Labore dolores neque consequuntur placeat.,2026-07-09
+412,3621,Port Congestion,High,Eaque maiores rem fugiat possimus accusantium.,2025-11-09
+413,2593,Weather,High,Nisi repellat quas nihil ullam porro repellat.,2026-01-23
+414,812,Weather,Low,Omnis temporibus magni porro accusamus.,2025-09-08
+415,2356,Port Congestion,Low,Quos culpa quisquam.,2026-04-08
+416,1921,Supplier Delay,Medium,Vel quos reprehenderit at.,2026-05-23
+417,1437,Transport Strike,High,Sed quos amet.,2026-05-17
+418,3542,Supplier Delay,Medium,Quidem magnam exercitationem odio molestias.,2026-02-16
+419,779,Supplier Delay,Medium,Aspernatur eveniet debitis iure ex sunt.,2026-05-07
+420,3056,Supplier Delay,Low,Reiciendis ratione omnis cupiditate neque at doloremque delectus.,2026-02-14
+421,3324,Machine Failure,High,Eos veritatis porro corporis fugiat laudantium.,2026-01-22
+422,2055,Traffic,Medium,Laboriosam dolore saepe sint reprehenderit error sunt accusamus.,2026-07-04
+423,3212,Machine Failure,Low,Aliquam nesciunt temporibus quas voluptatibus est rerum enim.,2026-07-07
+424,3840,Supplier Delay,Low,Voluptate nesciunt magnam quas aliquam illo soluta.,2026-03-23
+425,219,Port Congestion,Medium,Unde animi blanditiis adipisci cumque velit quod.,2026-06-06
+426,3423,Machine Failure,Low,Aliquid tempora eveniet id laboriosam beatae.,2025-10-11
+427,1760,Supplier Delay,Medium,Itaque recusandae excepturi dignissimos ratione.,2026-02-05
+428,183,Supplier Delay,High,Deleniti dignissimos nesciunt cupiditate.,2026-03-08
+429,3840,Machine Failure,Low,Praesentium provident at sunt eligendi.,2025-11-13
+430,1592,Machine Failure,Medium,Fugiat sequi qui sint sequi ipsum.,2025-08-22
+431,3780,Transport Strike,Medium,Qui suscipit molestiae molestias.,2026-03-16
+432,2810,Supplier Delay,Medium,Placeat cumque minima modi.,2026-04-19
+433,967,Transport Strike,Low,Minima fuga earum assumenda vitae.,2025-10-03
+434,1885,Transport Strike,Low,Repellat laudantium necessitatibus officia minima.,2025-08-21
+435,2920,Weather,High,Totam eos earum.,2025-08-18
+436,3175,Port Congestion,Medium,Laboriosam et reiciendis.,2026-04-03
+437,505,Machine Failure,Medium,Esse voluptate corrupti aliquam.,2026-05-03
+438,2955,Traffic,High,Necessitatibus eum excepturi at qui magnam debitis unde.,2026-02-06
+439,2466,Port Congestion,Medium,Nam nisi repellendus alias distinctio.,2025-10-14
+440,767,Supplier Delay,Medium,Saepe accusamus dicta fuga illo voluptas.,2025-12-03
+441,333,Machine Failure,High,Odit inventore eum.,2026-02-21
+442,2639,Transport Strike,Medium,Sequi dolorum enim vero dolor quisquam quae.,2026-05-20
+443,1516,Transport Strike,Low,Repellat tempora molestias.,2026-01-27
+444,2108,Weather,Low,Quos error exercitationem neque dignissimos fuga dicta.,2025-09-01
+445,2507,Port Congestion,High,Error excepturi dolore impedit laborum.,2026-01-28
+446,1846,Port Congestion,Low,Aspernatur officiis dolorem ipsam.,2025-12-02
+447,3067,Weather,Medium,Quaerat delectus ratione consectetur voluptates saepe dolores.,2025-09-04
+448,3355,Port Congestion,Medium,Sint labore possimus fugiat cumque harum.,2026-06-23
+449,2094,Port Congestion,High,Accusantium harum non corrupti numquam.,2025-11-12
+450,3146,Transport Strike,High,Laudantium doloribus sed doloribus non expedita.,2025-09-17
+451,2303,Traffic,Medium,Quo eaque expedita totam esse.,2026-05-12
+452,766,Traffic,Medium,Exercitationem natus dolore nisi ipsum.,2026-01-04
+453,2325,Weather,Medium,Unde doloribus dignissimos assumenda aut ex tempore consequuntur.,2026-05-22
+454,2654,Weather,Medium,Porro animi in velit quae.,2026-03-10
+455,2775,Weather,Medium,Ut voluptatem suscipit nostrum.,2026-06-08
+456,2472,Weather,Medium,Tenetur deleniti libero tempora.,2026-01-30
+457,3672,Port Congestion,High,Animi dolorem laborum.,2026-04-08
+458,1242,Weather,High,Molestias nihil molestias sapiente.,2025-10-03
+459,3017,Transport Strike,High,A maxime sed nesciunt repellendus dolore.,2025-11-30
+460,3123,Transport Strike,High,Aspernatur ducimus perspiciatis saepe harum beatae.,2026-02-07
+461,3844,Supplier Delay,High,Facere quibusdam iusto distinctio.,2026-01-22
+462,1958,Traffic,Low,Quo mollitia repellat repudiandae eveniet.,2026-03-13
+463,2101,Port Congestion,Low,Earum culpa mollitia facilis quisquam.,2026-06-30
+464,2209,Supplier Delay,High,Quo maiores accusamus dignissimos rem fuga qui.,2026-02-25
+465,679,Weather,High,Voluptas odit id accusantium.,2026-02-16
+466,1377,Supplier Delay,Medium,Ipsa aut neque temporibus temporibus iusto occaecati.,2026-03-13
+467,1032,Supplier Delay,High,Quis reprehenderit ut.,2026-07-03
+468,2910,Machine Failure,High,Cum qui ut ea voluptatibus ipsum.,2025-11-10
+469,1489,Port Congestion,High,Unde quis quam eaque sit dolor molestias.,2025-11-15
+470,2730,Transport Strike,Low,Quis odio facere fuga amet repellendus iure.,2025-08-23
+471,3996,Weather,High,Quidem sequi eius ea perspiciatis non doloribus repellat.,2026-05-13
+472,3930,Transport Strike,High,Velit fugit nobis recusandae repellat.,2025-12-08
+473,823,Weather,High,Iure corporis reprehenderit nobis.,2025-12-01
+474,2366,Supplier Delay,Medium,Consequatur maiores nisi velit nam quidem.,2026-07-14
+475,2610,Transport Strike,High,Maxime suscipit labore a numquam molestiae mollitia.,2026-05-05
+476,290,Traffic,Low,Voluptatibus ipsam corporis consequatur.,2025-09-03
+477,2561,Traffic,High,Sit voluptate voluptate culpa commodi sequi optio.,2025-09-23
+478,2352,Port Congestion,High,Iure animi sapiente molestiae deleniti iusto impedit.,2026-02-27
+479,805,Port Congestion,Medium,Aut in eius corporis tempora recusandae possimus quibusdam.,2025-11-13
+480,2547,Supplier Delay,Medium,Saepe molestias placeat blanditiis eveniet optio.,2026-05-10
+481,1316,Port Congestion,Low,Error similique eligendi soluta.,2025-09-23
+482,1552,Traffic,Low,Beatae rem itaque aspernatur dolore error dolores.,2026-03-11
+483,3836,Weather,Low,Consectetur accusantium iste.,2026-02-18
+484,2638,Traffic,Low,Optio aliquid accusantium odio.,2026-05-15
+485,3016,Port Congestion,High,Laudantium quaerat facilis quo qui at blanditiis.,2026-04-27
+486,702,Supplier Delay,High,Accusantium asperiores officiis voluptates veniam nobis facilis.,2026-03-23
+487,1215,Machine Failure,Medium,Laborum in rem beatae accusantium architecto distinctio.,2025-10-14
+488,3861,Machine Failure,Medium,Rem illum magni dolore.,2025-08-02
+489,2808,Machine Failure,Medium,Alias accusamus nesciunt voluptates nostrum autem cumque.,2026-01-24
+490,3503,Traffic,High,Odio rem voluptatibus voluptatem autem voluptatum.,2026-01-02
+491,2178,Port Congestion,High,Quasi nulla porro modi labore enim eum.,2026-02-20
+492,1085,Machine Failure,Low,Quam voluptatibus sunt cum similique nisi.,2025-12-23
+493,1643,Machine Failure,Medium,Recusandae nisi similique ea minima reprehenderit.,2026-03-31
+494,2652,Port Congestion,Low,Ratione animi dolores minima rerum.,2025-11-17
+495,100,Machine Failure,Low,Ipsam asperiores reiciendis vel accusamus quam ipsam qui.,2025-12-29
+496,1349,Transport Strike,High,Iusto iure vero amet doloremque quaerat quod praesentium.,2025-10-28
+497,2948,Weather,Low,Labore ullam sapiente esse temporibus voluptates nesciunt.,2026-04-30
+498,1469,Transport Strike,Low,Ipsa modi repudiandae quisquam.,2026-04-03
+499,581,Machine Failure,High,Quae cum vitae eos.,2026-04-11
+500,3393,Traffic,Low,Enim tenetur aliquam nostrum odio placeat.,2026-02-26
+501,3276,Supplier Delay,High,Voluptate aspernatur ipsum vero.,2026-02-18
+502,2019,Transport Strike,Low,Omnis vel ab voluptate earum tenetur fugit.,2025-12-02
+503,2158,Port Congestion,Low,Dicta culpa beatae.,2025-08-16
+504,3820,Traffic,Medium,Eius nam consequatur consequuntur fugit quibusdam porro delectus.,2026-04-14
+505,3665,Weather,Medium,Consequuntur assumenda expedita fugit in.,2026-01-13
+506,2555,Weather,Medium,Sunt accusamus fugiat rem natus ipsam officiis.,2026-06-05
+507,3958,Port Congestion,Low,Itaque eveniet odit voluptate veritatis aliquid ea.,2025-09-05
+508,2064,Supplier Delay,Low,Unde omnis repellat.,2025-07-29
+509,3905,Transport Strike,Medium,Accusantium non saepe consequuntur non alias harum.,2025-10-20
+510,1725,Port Congestion,High,Voluptatibus atque eius velit maxime.,2025-07-27
+511,709,Supplier Delay,Medium,Esse fuga provident dicta accusamus.,2026-03-14
+512,3515,Machine Failure,High,Quod nobis accusantium dolores molestiae ipsam.,2026-02-19
+513,1067,Transport Strike,High,Ipsa illum expedita dolor suscipit.,2025-09-30
+514,2973,Traffic,High,Maxime vitae necessitatibus eligendi asperiores.,2026-03-03
+515,2980,Weather,Low,Debitis labore culpa voluptas soluta quidem.,2026-04-07
+516,3376,Machine Failure,High,Molestiae ullam at quibusdam animi occaecati cupiditate.,2026-01-02
+517,361,Weather,Medium,Dolorum deserunt quod recusandae nostrum.,2025-08-09
+518,996,Traffic,Low,Beatae ut nihil.,2026-02-09
+519,535,Supplier Delay,Low,Expedita assumenda quae aut nemo sint nesciunt.,2025-12-17
+520,2086,Machine Failure,Low,Eius voluptate necessitatibus a ratione aspernatur veniam.,2026-04-18
+521,3432,Port Congestion,Medium,Magni quisquam blanditiis recusandae hic at.,2025-12-11
+522,2898,Port Congestion,Medium,Totam debitis tempora aliquam.,2026-02-04
+523,2457,Machine Failure,Low,Quibusdam sunt incidunt quisquam dolor tempora.,2026-03-31
+524,2301,Weather,Medium,Ipsum saepe suscipit corrupti praesentium ducimus.,2026-04-03
+525,935,Machine Failure,Low,Autem ipsam dolorem velit.,2025-08-23
+526,1922,Supplier Delay,Low,Ratione iste ipsam dolorum.,2025-12-01
+527,1975,Traffic,Low,Quas minima voluptate sunt aliquam totam dolorum.,2026-02-20
+528,910,Machine Failure,Medium,Animi corrupti ex sed inventore.,2026-06-13
+529,3430,Transport Strike,High,Sunt itaque nobis recusandae ipsa.,2026-06-26
+530,3640,Weather,Low,Aspernatur doloremque illum cumque.,2025-12-28
+531,1098,Traffic,Medium,Vel exercitationem delectus corrupti inventore nihil.,2026-06-18
+532,2279,Machine Failure,Medium,Molestiae explicabo pariatur autem.,2026-05-31
+533,306,Machine Failure,High,Voluptatum necessitatibus rerum minima aliquid fuga cum.,2025-08-08
+534,1991,Supplier Delay,Medium,Voluptas harum accusamus tenetur nobis.,2025-09-16
+535,2829,Traffic,Low,Quasi dolorem velit autem sapiente est facilis molestiae.,2026-01-31
+536,3225,Port Congestion,Medium,Dignissimos eos in.,2025-10-16
+537,2439,Traffic,High,Velit nihil aspernatur blanditiis id mollitia.,2025-07-31
+538,3856,Port Congestion,High,Ducimus dicta officia molestiae qui dicta in recusandae.,2026-07-11
+539,302,Transport Strike,Low,Quam sint reiciendis accusamus non vero reprehenderit.,2026-03-30
+540,204,Supplier Delay,High,Repellat veniam saepe dignissimos.,2026-01-12
+541,2102,Traffic,Low,Fugiat sunt dicta laudantium esse deserunt ad.,2026-03-11
+542,3479,Traffic,Medium,Molestias cumque maiores.,2026-07-03
+543,3361,Transport Strike,Low,Quaerat doloremque suscipit aperiam.,2025-09-25
+544,3071,Transport Strike,Medium,Officiis quidem autem eos.,2025-12-10
+545,62,Transport Strike,Low,Dicta ab ipsum iste soluta.,2025-12-26
+546,2339,Supplier Delay,Low,Quam occaecati quos quia ea dolores.,2026-06-06
+547,2474,Port Congestion,Low,Placeat assumenda soluta iure.,2025-10-15
+548,1051,Transport Strike,High,Est culpa est.,2025-11-21
+549,2334,Port Congestion,Medium,Repudiandae aperiam at dolore porro modi libero id.,2026-04-11
+550,749,Supplier Delay,High,Ullam a quaerat pariatur inventore eaque praesentium.,2025-12-21
+551,2451,Supplier Delay,Medium,Numquam iste nihil eligendi.,2026-07-11
+552,87,Supplier Delay,Low,Fuga neque minus laudantium nesciunt et.,2026-01-24
+553,976,Machine Failure,High,Dolores magnam commodi impedit dolore numquam aliquid.,2026-05-21
+554,859,Supplier Delay,Low,Impedit consectetur veniam assumenda.,2026-02-03
+555,933,Traffic,Medium,Quisquam et veritatis fugit enim in.,2026-04-14
+556,2375,Machine Failure,High,In doloribus consectetur accusamus.,2026-01-02
+557,2928,Traffic,High,Assumenda minus facere earum.,2025-11-04
+558,3656,Transport Strike,Medium,Maiores explicabo unde.,2026-07-13
+559,1303,Transport Strike,Medium,Debitis ea aliquam at.,2026-02-04
+560,3530,Machine Failure,High,Quod quisquam veritatis excepturi molestias eos labore consequatur.,2026-06-16
+561,1602,Transport Strike,High,Explicabo iusto quisquam.,2025-08-17
+562,2665,Traffic,Low,Quasi esse at dicta ipsum accusamus laboriosam quidem.,2025-12-15
+563,1727,Machine Failure,Medium,Possimus odit rerum asperiores nostrum magnam.,2026-05-29
+564,2249,Port Congestion,Medium,Possimus quas distinctio aspernatur.,2026-07-12
+565,1578,Weather,High,Numquam ducimus consequatur.,2026-06-06
+566,2544,Traffic,Medium,Vel nulla inventore.,2025-09-16
+567,124,Traffic,High,Quod esse voluptate aut asperiores.,2025-10-14
+568,3481,Port Congestion,High,Sapiente officiis nobis sit.,2026-05-17
+569,2559,Weather,Medium,Inventore laboriosam sapiente repellendus.,2025-08-22
+570,3674,Traffic,High,Labore alias nobis soluta amet.,2025-11-04
+571,50,Supplier Delay,Low,Dolores odio neque atque impedit.,2025-11-23
+572,122,Port Congestion,High,A deserunt aliquam assumenda saepe animi.,2026-01-19
+573,245,Weather,Medium,Quidem quod porro ex incidunt velit.,2026-02-06
+574,516,Machine Failure,Medium,Quas quidem quam dolorum.,2026-06-13
+575,1648,Machine Failure,Low,Nulla harum reprehenderit beatae veniam commodi ad.,2025-11-05
+576,3215,Port Congestion,High,Perspiciatis iste assumenda esse.,2026-03-11
+577,3930,Transport Strike,Medium,Fugiat reprehenderit iste.,2026-04-18
+578,1447,Transport Strike,High,Tempore animi dolorem in illo sint et.,2025-08-14
+579,716,Weather,High,Hic nostrum veritatis quae repellendus accusamus error.,2025-12-03
+580,2514,Machine Failure,Low,Pariatur nobis adipisci repudiandae unde in repellat ipsam.,2026-03-19
+581,2513,Transport Strike,Medium,Quidem minima alias sint.,2025-08-04
+582,1629,Supplier Delay,High,Deleniti dolores corrupti nemo.,2025-12-06
+583,2316,Weather,High,Voluptatibus dignissimos porro cumque consectetur ea reprehenderit.,2026-03-13
+584,868,Transport Strike,High,Possimus sapiente veniam autem atque.,2025-10-17
+585,2109,Supplier Delay,Low,Deleniti iure iusto autem sit sit temporibus.,2025-09-26
+586,3255,Supplier Delay,Low,Repudiandae voluptatem in dolores quod odio.,2025-10-28
+587,3150,Supplier Delay,Medium,Nemo saepe a illum.,2025-09-19
+588,1407,Traffic,Low,Ut laborum dolor aperiam minima blanditiis.,2026-02-10
+589,833,Transport Strike,High,Vel aperiam rerum nisi.,2026-02-20
+590,3542,Machine Failure,High,Vel quis harum vitae.,2025-09-12
+591,3870,Weather,Low,Quo corporis atque accusantium itaque recusandae ipsa.,2026-02-27
+592,1169,Supplier Delay,Medium,Excepturi ea distinctio deleniti temporibus corrupti laborum.,2026-01-21
+593,1848,Transport Strike,Medium,Incidunt eveniet sunt expedita quod dolorum.,2026-04-30
+594,986,Transport Strike,Low,Libero molestiae molestiae nostrum delectus dolor.,2026-03-24
+595,292,Machine Failure,Low,Est quia earum.,2025-12-02
+596,3168,Supplier Delay,Low,Aspernatur ipsum cumque.,2025-11-26
+597,1802,Port Congestion,Low,Voluptatibus qui possimus.,2026-01-16
+598,3001,Port Congestion,High,Soluta voluptatum ex molestias.,2026-03-18
+599,1523,Supplier Delay,Medium,Tempora quas veritatis suscipit necessitatibus incidunt voluptatibus.,2026-04-20
+600,3896,Port Congestion,High,Ratione vero debitis ratione perferendis expedita ipsam.,2025-10-08

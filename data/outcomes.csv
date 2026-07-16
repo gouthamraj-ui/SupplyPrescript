@@ -1,0 +1,601 @@
+outcome_id,decision_id,outcome_status,delay_days,cost_change,remarks
+1,1,Resolved,2,3476.99,Issue resolved successfully
+2,2,Resolved,7,3637.7,Issue resolved successfully
+3,3,Resolved,10,2546.58,Issue resolved successfully
+4,4,Resolved,10,14597.01,Cost increased
+5,5,Pending,14,11357.7,Minor delay occurred
+6,6,Resolved,6,-367.19,Supplier changed
+7,7,Partially Resolved,0,3989.89,Issue resolved successfully
+8,8,Failed,1,14006.02,Cost increased
+9,9,Resolved,5,13060.64,Shipment rerouted
+10,10,Partially Resolved,8,1006.49,Supplier changed
+11,11,Pending,6,14550.52,Issue resolved successfully
+12,12,Resolved,12,-2314.46,Minor delay occurred
+13,13,Resolved,2,13192.82,Minor delay occurred
+14,14,Failed,9,11578.33,Cost increased
+15,15,Failed,13,-1507.57,Minor delay occurred
+16,16,Pending,0,6821.31,Supplier changed
+17,17,Partially Resolved,15,11419.18,Shipment rerouted
+18,18,Pending,15,13597.1,Supplier changed
+19,19,Resolved,2,-4732.83,Issue resolved successfully
+20,20,Resolved,0,12200.26,Issue resolved successfully
+21,21,Resolved,11,12036.56,Cost increased
+22,22,Pending,14,-3069.31,Shipment rerouted
+23,23,Pending,10,12369.49,Cost increased
+24,24,Resolved,2,5666.81,Supplier changed
+25,25,Pending,5,3338.21,Shipment rerouted
+26,26,Failed,4,6419.51,Shipment rerouted
+27,27,Pending,5,5827.67,Minor delay occurred
+28,28,Partially Resolved,12,-3577.35,Minor delay occurred
+29,29,Partially Resolved,13,-1588.92,Cost increased
+30,30,Partially Resolved,11,-2593.92,Cost increased
+31,31,Partially Resolved,7,-3004.25,Minor delay occurred
+32,32,Pending,3,14380.92,Supplier changed
+33,33,Partially Resolved,15,13578.93,Issue resolved successfully
+34,34,Resolved,8,-4266.16,Cost increased
+35,35,Failed,15,13737.1,Minor delay occurred
+36,36,Pending,5,-221.32,Shipment rerouted
+37,37,Pending,8,-3399.62,Minor delay occurred
+38,38,Failed,10,7868.65,Shipment rerouted
+39,39,Partially Resolved,4,1726.84,Issue resolved successfully
+40,40,Pending,5,-4024.78,Cost increased
+41,41,Partially Resolved,11,1215.53,Shipment rerouted
+42,42,Resolved,7,5601.55,Cost increased
+43,43,Pending,12,12599.93,Supplier changed
+44,44,Pending,9,4740.33,Cost increased
+45,45,Failed,5,5007.42,Issue resolved successfully
+46,46,Failed,8,10144.14,Cost increased
+47,47,Resolved,2,-2594.28,Minor delay occurred
+48,48,Partially Resolved,1,-1095.14,Minor delay occurred
+49,49,Pending,14,4150.85,Issue resolved successfully
+50,50,Failed,4,-1027.59,Issue resolved successfully
+51,51,Pending,0,8005.11,Shipment rerouted
+52,52,Failed,8,9985.79,Issue resolved successfully
+53,53,Resolved,14,3350.02,Supplier changed
+54,54,Resolved,14,13321.13,Shipment rerouted
+55,55,Resolved,9,11109.17,Supplier changed
+56,56,Failed,1,14073.7,Supplier changed
+57,57,Pending,15,4082.13,Shipment rerouted
+58,58,Partially Resolved,12,-4625.87,Supplier changed
+59,59,Failed,3,5696.01,Supplier changed
+60,60,Resolved,11,754.83,Shipment rerouted
+61,61,Pending,1,9905.13,Cost increased
+62,62,Partially Resolved,10,-4126.53,Supplier changed
+63,63,Failed,4,13279.97,Shipment rerouted
+64,64,Partially Resolved,7,-2704.11,Shipment rerouted
+65,65,Failed,12,4172.67,Issue resolved successfully
+66,66,Pending,4,6698.37,Supplier changed
+67,67,Partially Resolved,13,6744.58,Minor delay occurred
+68,68,Partially Resolved,13,5030.88,Shipment rerouted
+69,69,Failed,14,9351.14,Supplier changed
+70,70,Pending,6,1695.72,Supplier changed
+71,71,Pending,3,1257.49,Cost increased
+72,72,Partially Resolved,9,4756.78,Supplier changed
+73,73,Failed,10,2254.2,Cost increased
+74,74,Pending,13,-1292.74,Supplier changed
+75,75,Resolved,10,2341.41,Issue resolved successfully
+76,76,Resolved,10,-4054.26,Shipment rerouted
+77,77,Pending,5,5399.78,Cost increased
+78,78,Partially Resolved,1,1625.21,Minor delay occurred
+79,79,Partially Resolved,7,12362.12,Minor delay occurred
+80,80,Partially Resolved,0,-445.5,Cost increased
+81,81,Failed,8,9642.78,Shipment rerouted
+82,82,Pending,7,5784.19,Issue resolved successfully
+83,83,Failed,1,3777.5,Shipment rerouted
+84,84,Pending,5,-361.68,Minor delay occurred
+85,85,Failed,11,14366.53,Minor delay occurred
+86,86,Pending,4,11863.62,Supplier changed
+87,87,Resolved,2,10567.49,Issue resolved successfully
+88,88,Pending,12,-1175.81,Supplier changed
+89,89,Partially Resolved,13,14627.63,Issue resolved successfully
+90,90,Pending,1,10508.94,Supplier changed
+91,91,Failed,4,-2412.86,Shipment rerouted
+92,92,Pending,3,4562.85,Minor delay occurred
+93,93,Partially Resolved,10,3803.32,Supplier changed
+94,94,Resolved,13,10233.09,Supplier changed
+95,95,Pending,7,924.52,Supplier changed
+96,96,Failed,2,-3084.17,Cost increased
+97,97,Pending,7,-4662.55,Supplier changed
+98,98,Resolved,2,12747.64,Issue resolved successfully
+99,99,Pending,7,3314.9,Issue resolved successfully
+100,100,Failed,2,10191.15,Shipment rerouted
+101,101,Partially Resolved,3,4339.61,Minor delay occurred
+102,102,Resolved,5,-47.9,Supplier changed
+103,103,Partially Resolved,1,5401.82,Supplier changed
+104,104,Resolved,4,9696.36,Shipment rerouted
+105,105,Resolved,7,8565.53,Cost increased
+106,106,Failed,0,9875.37,Supplier changed
+107,107,Pending,7,10464.69,Cost increased
+108,108,Pending,11,815.06,Supplier changed
+109,109,Resolved,11,13479.84,Shipment rerouted
+110,110,Resolved,0,-2328.06,Minor delay occurred
+111,111,Failed,3,10949.6,Supplier changed
+112,112,Resolved,0,14973.47,Supplier changed
+113,113,Pending,5,1575.05,Issue resolved successfully
+114,114,Failed,13,159.59,Minor delay occurred
+115,115,Pending,14,7616.01,Issue resolved successfully
+116,116,Failed,15,4797.03,Issue resolved successfully
+117,117,Resolved,2,985.9,Issue resolved successfully
+118,118,Failed,9,7328.38,Issue resolved successfully
+119,119,Failed,12,-2986.64,Minor delay occurred
+120,120,Partially Resolved,12,8474.35,Shipment rerouted
+121,121,Pending,12,13478.58,Cost increased
+122,122,Partially Resolved,5,14208.74,Supplier changed
+123,123,Failed,3,-3259.63,Shipment rerouted
+124,124,Failed,9,6434.54,Minor delay occurred
+125,125,Partially Resolved,1,-3797.68,Cost increased
+126,126,Resolved,6,9321.8,Cost increased
+127,127,Partially Resolved,10,-4624.52,Cost increased
+128,128,Partially Resolved,12,12334.16,Shipment rerouted
+129,129,Resolved,0,5484.29,Supplier changed
+130,130,Pending,4,7956.65,Supplier changed
+131,131,Pending,8,445.18,Shipment rerouted
+132,132,Resolved,12,-2485.29,Minor delay occurred
+133,133,Resolved,0,2062.11,Supplier changed
+134,134,Resolved,4,-2728.06,Cost increased
+135,135,Pending,5,3293.29,Minor delay occurred
+136,136,Pending,12,8668.69,Issue resolved successfully
+137,137,Resolved,7,1002.49,Minor delay occurred
+138,138,Resolved,5,-3614.23,Issue resolved successfully
+139,139,Pending,15,9461.22,Cost increased
+140,140,Partially Resolved,1,-3353.1,Cost increased
+141,141,Failed,9,-288.56,Supplier changed
+142,142,Failed,6,8117.61,Shipment rerouted
+143,143,Failed,3,8799.91,Issue resolved successfully
+144,144,Resolved,0,4865.72,Shipment rerouted
+145,145,Pending,7,1014.72,Issue resolved successfully
+146,146,Resolved,5,-3833.97,Issue resolved successfully
+147,147,Failed,1,14127.81,Shipment rerouted
+148,148,Pending,4,6759.2,Minor delay occurred
+149,149,Pending,10,4686.86,Shipment rerouted
+150,150,Partially Resolved,15,14508.23,Minor delay occurred
+151,151,Pending,10,14477.78,Minor delay occurred
+152,152,Partially Resolved,4,2310.22,Issue resolved successfully
+153,153,Pending,13,14604.88,Supplier changed
+154,154,Partially Resolved,4,13410.06,Issue resolved successfully
+155,155,Resolved,3,3891.68,Shipment rerouted
+156,156,Pending,14,1946.79,Cost increased
+157,157,Partially Resolved,13,9810.86,Issue resolved successfully
+158,158,Failed,8,7581.25,Shipment rerouted
+159,159,Failed,14,8247.6,Shipment rerouted
+160,160,Partially Resolved,0,11323.1,Minor delay occurred
+161,161,Resolved,13,5472.92,Supplier changed
+162,162,Resolved,9,1860.19,Cost increased
+163,163,Pending,14,3484.0,Minor delay occurred
+164,164,Pending,10,14993.84,Minor delay occurred
+165,165,Partially Resolved,15,-3083.73,Supplier changed
+166,166,Failed,4,4627.54,Issue resolved successfully
+167,167,Resolved,12,-153.09,Issue resolved successfully
+168,168,Partially Resolved,5,-4267.14,Minor delay occurred
+169,169,Partially Resolved,1,3935.41,Minor delay occurred
+170,170,Partially Resolved,3,1374.6,Minor delay occurred
+171,171,Failed,12,8915.92,Shipment rerouted
+172,172,Failed,15,2338.27,Issue resolved successfully
+173,173,Partially Resolved,15,9525.63,Cost increased
+174,174,Failed,3,5214.68,Cost increased
+175,175,Failed,1,3871.98,Issue resolved successfully
+176,176,Failed,3,3092.35,Shipment rerouted
+177,177,Resolved,6,5367.53,Supplier changed
+178,178,Resolved,13,2291.11,Cost increased
+179,179,Partially Resolved,3,3377.43,Supplier changed
+180,180,Partially Resolved,2,-1471.11,Shipment rerouted
+181,181,Failed,14,-3731.02,Shipment rerouted
+182,182,Resolved,15,-4303.1,Issue resolved successfully
+183,183,Partially Resolved,0,70.48,Shipment rerouted
+184,184,Partially Resolved,4,-3143.83,Cost increased
+185,185,Pending,4,910.92,Shipment rerouted
+186,186,Partially Resolved,1,9458.69,Issue resolved successfully
+187,187,Failed,6,-4289.36,Cost increased
+188,188,Partially Resolved,15,-2453.46,Shipment rerouted
+189,189,Pending,13,-4760.81,Supplier changed
+190,190,Failed,1,2236.03,Minor delay occurred
+191,191,Partially Resolved,6,1527.61,Shipment rerouted
+192,192,Partially Resolved,2,6557.53,Supplier changed
+193,193,Failed,7,2949.95,Issue resolved successfully
+194,194,Pending,6,-937.55,Cost increased
+195,195,Resolved,15,14158.93,Issue resolved successfully
+196,196,Failed,10,-3196.81,Supplier changed
+197,197,Failed,2,-1059.44,Cost increased
+198,198,Partially Resolved,12,6427.76,Shipment rerouted
+199,199,Resolved,6,7097.97,Cost increased
+200,200,Pending,11,4604.2,Shipment rerouted
+201,201,Failed,1,-4652.32,Minor delay occurred
+202,202,Failed,2,12370.56,Shipment rerouted
+203,203,Partially Resolved,7,14501.24,Issue resolved successfully
+204,204,Failed,2,905.31,Minor delay occurred
+205,205,Failed,12,-1976.34,Shipment rerouted
+206,206,Partially Resolved,10,956.54,Issue resolved successfully
+207,207,Pending,7,10503.3,Supplier changed
+208,208,Resolved,8,9693.15,Issue resolved successfully
+209,209,Pending,11,5363.34,Supplier changed
+210,210,Partially Resolved,15,14471.49,Issue resolved successfully
+211,211,Pending,11,4422.97,Minor delay occurred
+212,212,Partially Resolved,0,13394.55,Shipment rerouted
+213,213,Failed,9,3277.5,Supplier changed
+214,214,Pending,11,-2359.57,Cost increased
+215,215,Failed,12,13406.14,Shipment rerouted
+216,216,Partially Resolved,9,14541.44,Issue resolved successfully
+217,217,Resolved,8,-1230.19,Shipment rerouted
+218,218,Pending,3,5975.89,Shipment rerouted
+219,219,Failed,3,3430.75,Minor delay occurred
+220,220,Failed,9,12256.08,Shipment rerouted
+221,221,Resolved,5,3866.41,Issue resolved successfully
+222,222,Failed,0,3979.43,Issue resolved successfully
+223,223,Failed,15,-1829.52,Shipment rerouted
+224,224,Pending,4,5839.22,Shipment rerouted
+225,225,Resolved,6,9660.83,Minor delay occurred
+226,226,Resolved,14,2526.89,Minor delay occurred
+227,227,Partially Resolved,6,591.61,Supplier changed
+228,228,Pending,5,-3816.69,Minor delay occurred
+229,229,Resolved,7,10107.94,Issue resolved successfully
+230,230,Resolved,11,12186.74,Issue resolved successfully
+231,231,Pending,2,13019.73,Issue resolved successfully
+232,232,Resolved,6,1884.31,Minor delay occurred
+233,233,Failed,15,10275.39,Issue resolved successfully
+234,234,Pending,10,-2175.14,Cost increased
+235,235,Failed,14,9798.99,Cost increased
+236,236,Pending,13,3464.01,Cost increased
+237,237,Pending,11,13681.69,Minor delay occurred
+238,238,Partially Resolved,7,6223.56,Minor delay occurred
+239,239,Pending,0,-4379.37,Shipment rerouted
+240,240,Failed,13,5665.87,Issue resolved successfully
+241,241,Failed,0,5684.05,Shipment rerouted
+242,242,Partially Resolved,0,4952.33,Issue resolved successfully
+243,243,Partially Resolved,12,11751.74,Shipment rerouted
+244,244,Pending,10,10885.32,Issue resolved successfully
+245,245,Partially Resolved,4,-4483.8,Shipment rerouted
+246,246,Partially Resolved,3,-1768.71,Cost increased
+247,247,Pending,15,10560.7,Issue resolved successfully
+248,248,Resolved,14,3042.32,Issue resolved successfully
+249,249,Partially Resolved,9,5710.81,Cost increased
+250,250,Resolved,4,1800.58,Supplier changed
+251,251,Pending,11,14354.77,Shipment rerouted
+252,252,Resolved,13,2583.57,Issue resolved successfully
+253,253,Resolved,14,11782.19,Shipment rerouted
+254,254,Pending,0,-539.51,Issue resolved successfully
+255,255,Partially Resolved,13,-50.1,Shipment rerouted
+256,256,Resolved,5,7872.41,Cost increased
+257,257,Partially Resolved,14,14935.77,Cost increased
+258,258,Failed,8,-1211.85,Supplier changed
+259,259,Failed,2,9575.75,Cost increased
+260,260,Failed,1,2097.34,Shipment rerouted
+261,261,Resolved,5,9270.27,Shipment rerouted
+262,262,Pending,12,12946.47,Supplier changed
+263,263,Pending,8,10087.25,Cost increased
+264,264,Partially Resolved,14,4264.04,Supplier changed
+265,265,Failed,7,238.11,Issue resolved successfully
+266,266,Failed,15,-731.05,Supplier changed
+267,267,Resolved,4,-2866.51,Shipment rerouted
+268,268,Resolved,2,7919.33,Supplier changed
+269,269,Partially Resolved,7,-2676.82,Supplier changed
+270,270,Failed,13,1566.96,Shipment rerouted
+271,271,Failed,14,4840.09,Cost increased
+272,272,Resolved,7,4166.52,Supplier changed
+273,273,Pending,0,3953.31,Minor delay occurred
+274,274,Pending,12,769.59,Issue resolved successfully
+275,275,Pending,10,-125.97,Cost increased
+276,276,Resolved,4,373.71,Shipment rerouted
+277,277,Failed,15,-2809.5,Minor delay occurred
+278,278,Failed,15,-1589.93,Supplier changed
+279,279,Partially Resolved,12,5386.64,Minor delay occurred
+280,280,Failed,12,-2816.36,Cost increased
+281,281,Resolved,8,8046.25,Minor delay occurred
+282,282,Resolved,3,-2484.27,Minor delay occurred
+283,283,Partially Resolved,12,2091.15,Issue resolved successfully
+284,284,Pending,6,8152.68,Supplier changed
+285,285,Pending,13,-1701.03,Issue resolved successfully
+286,286,Pending,10,4247.38,Cost increased
+287,287,Resolved,7,1265.01,Shipment rerouted
+288,288,Pending,4,9015.82,Cost increased
+289,289,Partially Resolved,10,-2532.37,Supplier changed
+290,290,Pending,10,-558.82,Minor delay occurred
+291,291,Pending,10,3839.08,Cost increased
+292,292,Resolved,3,3858.35,Cost increased
+293,293,Failed,9,11211.74,Issue resolved successfully
+294,294,Pending,9,12481.97,Supplier changed
+295,295,Partially Resolved,6,2569.97,Issue resolved successfully
+296,296,Failed,8,-3771.71,Issue resolved successfully
+297,297,Pending,5,3096.31,Shipment rerouted
+298,298,Pending,7,-3039.81,Minor delay occurred
+299,299,Partially Resolved,5,7437.85,Cost increased
+300,300,Resolved,0,6155.41,Cost increased
+301,301,Failed,6,7093.46,Issue resolved successfully
+302,302,Resolved,4,7236.7,Minor delay occurred
+303,303,Resolved,11,7929.16,Cost increased
+304,304,Partially Resolved,0,6570.6,Shipment rerouted
+305,305,Failed,9,-4038.83,Minor delay occurred
+306,306,Pending,7,1851.93,Supplier changed
+307,307,Pending,10,476.82,Minor delay occurred
+308,308,Resolved,1,89.4,Issue resolved successfully
+309,309,Partially Resolved,0,2081.83,Supplier changed
+310,310,Partially Resolved,13,8141.89,Shipment rerouted
+311,311,Resolved,0,1567.19,Cost increased
+312,312,Pending,7,9786.35,Supplier changed
+313,313,Resolved,7,7084.87,Shipment rerouted
+314,314,Partially Resolved,10,9363.41,Shipment rerouted
+315,315,Partially Resolved,7,11490.16,Issue resolved successfully
+316,316,Resolved,8,4005.52,Cost increased
+317,317,Resolved,13,14160.58,Shipment rerouted
+318,318,Failed,5,11055.81,Cost increased
+319,319,Partially Resolved,12,-1257.93,Minor delay occurred
+320,320,Pending,10,-4378.57,Minor delay occurred
+321,321,Partially Resolved,11,13461.32,Issue resolved successfully
+322,322,Failed,0,7794.7,Cost increased
+323,323,Pending,1,10136.81,Supplier changed
+324,324,Failed,11,3947.83,Minor delay occurred
+325,325,Pending,12,-4769.86,Issue resolved successfully
+326,326,Pending,5,11061.76,Minor delay occurred
+327,327,Failed,4,3179.22,Supplier changed
+328,328,Failed,9,8853.79,Supplier changed
+329,329,Partially Resolved,12,-2950.43,Supplier changed
+330,330,Resolved,14,9076.43,Issue resolved successfully
+331,331,Failed,5,13551.74,Supplier changed
+332,332,Resolved,2,14686.96,Shipment rerouted
+333,333,Partially Resolved,1,8656.29,Supplier changed
+334,334,Partially Resolved,15,4747.99,Shipment rerouted
+335,335,Resolved,5,13083.29,Minor delay occurred
+336,336,Partially Resolved,2,6709.81,Issue resolved successfully
+337,337,Pending,3,3012.4,Supplier changed
+338,338,Partially Resolved,10,-529.22,Shipment rerouted
+339,339,Pending,1,-2464.35,Cost increased
+340,340,Partially Resolved,6,8761.63,Minor delay occurred
+341,341,Pending,2,5430.85,Supplier changed
+342,342,Resolved,9,6942.66,Issue resolved successfully
+343,343,Failed,9,5704.68,Minor delay occurred
+344,344,Resolved,3,9154.63,Minor delay occurred
+345,345,Resolved,5,8543.01,Supplier changed
+346,346,Pending,6,3194.37,Cost increased
+347,347,Partially Resolved,4,-2852.62,Shipment rerouted
+348,348,Resolved,8,9254.39,Issue resolved successfully
+349,349,Failed,3,11030.76,Cost increased
+350,350,Failed,14,-3685.94,Issue resolved successfully
+351,351,Resolved,3,7007.94,Shipment rerouted
+352,352,Partially Resolved,14,-302.45,Cost increased
+353,353,Resolved,8,11422.95,Cost increased
+354,354,Partially Resolved,14,8860.61,Supplier changed
+355,355,Failed,3,717.16,Cost increased
+356,356,Resolved,7,8182.57,Cost increased
+357,357,Pending,9,12664.1,Shipment rerouted
+358,358,Pending,14,-2368.62,Minor delay occurred
+359,359,Partially Resolved,15,4953.43,Cost increased
+360,360,Partially Resolved,11,11090.29,Cost increased
+361,361,Resolved,4,9203.12,Issue resolved successfully
+362,362,Partially Resolved,7,1460.88,Cost increased
+363,363,Partially Resolved,5,3827.83,Shipment rerouted
+364,364,Resolved,12,13096.32,Supplier changed
+365,365,Resolved,13,-1854.7,Cost increased
+366,366,Pending,0,8968.32,Shipment rerouted
+367,367,Partially Resolved,1,-1535.14,Supplier changed
+368,368,Resolved,3,1047.9,Issue resolved successfully
+369,369,Pending,11,1519.28,Shipment rerouted
+370,370,Partially Resolved,2,2525.57,Issue resolved successfully
+371,371,Pending,5,-3160.47,Cost increased
+372,372,Pending,8,-2546.13,Minor delay occurred
+373,373,Pending,3,10388.88,Issue resolved successfully
+374,374,Resolved,8,10550.53,Supplier changed
+375,375,Resolved,13,7747.01,Minor delay occurred
+376,376,Failed,8,2829.32,Shipment rerouted
+377,377,Partially Resolved,5,7520.01,Minor delay occurred
+378,378,Partially Resolved,0,5835.23,Minor delay occurred
+379,379,Pending,7,9169.44,Issue resolved successfully
+380,380,Pending,9,-4646.39,Issue resolved successfully
+381,381,Resolved,15,10233.12,Minor delay occurred
+382,382,Resolved,8,9607.26,Shipment rerouted
+383,383,Resolved,6,13146.78,Minor delay occurred
+384,384,Failed,5,12305.87,Supplier changed
+385,385,Partially Resolved,0,14518.74,Shipment rerouted
+386,386,Partially Resolved,13,1332.24,Cost increased
+387,387,Resolved,4,281.81,Minor delay occurred
+388,388,Resolved,13,4323.99,Supplier changed
+389,389,Failed,13,6678.9,Supplier changed
+390,390,Pending,8,11724.76,Cost increased
+391,391,Resolved,4,4643.77,Minor delay occurred
+392,392,Resolved,15,13260.09,Minor delay occurred
+393,393,Failed,15,4853.73,Shipment rerouted
+394,394,Resolved,6,-656.74,Shipment rerouted
+395,395,Failed,14,4530.74,Minor delay occurred
+396,396,Failed,9,-348.63,Supplier changed
+397,397,Resolved,9,-4967.84,Minor delay occurred
+398,398,Partially Resolved,13,-237.32,Issue resolved successfully
+399,399,Failed,5,10912.33,Supplier changed
+400,400,Failed,14,13796.54,Supplier changed
+401,401,Partially Resolved,13,-3302.21,Cost increased
+402,402,Partially Resolved,14,724.16,Cost increased
+403,403,Resolved,4,5003.43,Minor delay occurred
+404,404,Pending,8,2568.92,Shipment rerouted
+405,405,Resolved,6,-209.82,Supplier changed
+406,406,Partially Resolved,4,10047.91,Cost increased
+407,407,Resolved,6,4635.84,Minor delay occurred
+408,408,Pending,5,9565.61,Supplier changed
+409,409,Partially Resolved,5,-247.82,Issue resolved successfully
+410,410,Pending,5,8388.97,Supplier changed
+411,411,Failed,9,8861.46,Shipment rerouted
+412,412,Pending,13,-4497.3,Minor delay occurred
+413,413,Pending,15,3924.67,Supplier changed
+414,414,Failed,3,9614.39,Minor delay occurred
+415,415,Pending,5,655.25,Supplier changed
+416,416,Failed,15,7171.61,Cost increased
+417,417,Pending,14,3313.26,Shipment rerouted
+418,418,Failed,9,12146.12,Shipment rerouted
+419,419,Pending,7,-1744.35,Cost increased
+420,420,Failed,9,-1177.72,Minor delay occurred
+421,421,Partially Resolved,10,4938.35,Supplier changed
+422,422,Pending,12,-3494.78,Minor delay occurred
+423,423,Resolved,0,6444.42,Cost increased
+424,424,Partially Resolved,15,14008.96,Issue resolved successfully
+425,425,Resolved,5,13163.01,Cost increased
+426,426,Partially Resolved,4,3350.61,Issue resolved successfully
+427,427,Pending,5,-376.38,Shipment rerouted
+428,428,Failed,1,6606.66,Issue resolved successfully
+429,429,Partially Resolved,6,3907.66,Cost increased
+430,430,Failed,9,3599.21,Cost increased
+431,431,Partially Resolved,13,4363.3,Shipment rerouted
+432,432,Resolved,1,2647.0,Issue resolved successfully
+433,433,Resolved,8,-1081.13,Issue resolved successfully
+434,434,Pending,5,-971.98,Shipment rerouted
+435,435,Resolved,12,-3322.52,Supplier changed
+436,436,Resolved,15,9033.5,Supplier changed
+437,437,Resolved,8,6659.93,Supplier changed
+438,438,Partially Resolved,6,8602.82,Issue resolved successfully
+439,439,Partially Resolved,6,8730.21,Shipment rerouted
+440,440,Failed,11,13888.08,Supplier changed
+441,441,Pending,9,9268.08,Cost increased
+442,442,Pending,11,13460.2,Minor delay occurred
+443,443,Partially Resolved,12,-2728.62,Issue resolved successfully
+444,444,Pending,11,9401.47,Issue resolved successfully
+445,445,Partially Resolved,14,13930.65,Issue resolved successfully
+446,446,Partially Resolved,10,-2861.43,Minor delay occurred
+447,447,Failed,11,3406.22,Minor delay occurred
+448,448,Failed,9,822.48,Issue resolved successfully
+449,449,Partially Resolved,3,-2667.0,Issue resolved successfully
+450,450,Partially Resolved,1,-3013.56,Minor delay occurred
+451,451,Pending,4,14154.28,Shipment rerouted
+452,452,Failed,11,8084.27,Supplier changed
+453,453,Partially Resolved,15,14341.76,Issue resolved successfully
+454,454,Resolved,4,7287.36,Cost increased
+455,455,Resolved,7,6175.44,Shipment rerouted
+456,456,Partially Resolved,14,11750.92,Shipment rerouted
+457,457,Pending,9,2093.3,Cost increased
+458,458,Resolved,7,-2729.0,Supplier changed
+459,459,Partially Resolved,0,1969.55,Issue resolved successfully
+460,460,Partially Resolved,11,6531.98,Cost increased
+461,461,Partially Resolved,15,1673.23,Supplier changed
+462,462,Resolved,6,7518.73,Minor delay occurred
+463,463,Partially Resolved,0,6528.71,Shipment rerouted
+464,464,Failed,10,-384.95,Minor delay occurred
+465,465,Resolved,8,796.98,Issue resolved successfully
+466,466,Failed,14,9258.55,Cost increased
+467,467,Failed,7,1124.09,Cost increased
+468,468,Resolved,15,14649.66,Shipment rerouted
+469,469,Partially Resolved,1,14517.28,Supplier changed
+470,470,Pending,2,6776.72,Minor delay occurred
+471,471,Partially Resolved,12,3185.69,Cost increased
+472,472,Partially Resolved,6,5721.65,Issue resolved successfully
+473,473,Partially Resolved,8,8129.6,Supplier changed
+474,474,Partially Resolved,8,11438.6,Issue resolved successfully
+475,475,Failed,10,9196.45,Supplier changed
+476,476,Pending,14,1462.07,Issue resolved successfully
+477,477,Resolved,7,14620.15,Minor delay occurred
+478,478,Pending,13,6202.34,Cost increased
+479,479,Partially Resolved,12,-864.45,Cost increased
+480,480,Failed,1,9828.03,Issue resolved successfully
+481,481,Partially Resolved,4,-1317.94,Issue resolved successfully
+482,482,Resolved,4,9335.72,Cost increased
+483,483,Partially Resolved,6,-1840.07,Cost increased
+484,484,Resolved,5,10924.19,Issue resolved successfully
+485,485,Failed,0,6355.97,Cost increased
+486,486,Failed,11,1057.38,Issue resolved successfully
+487,487,Pending,9,-3270.18,Issue resolved successfully
+488,488,Partially Resolved,7,13888.05,Minor delay occurred
+489,489,Pending,6,4937.56,Issue resolved successfully
+490,490,Failed,8,13099.66,Minor delay occurred
+491,491,Failed,6,-4415.8,Cost increased
+492,492,Resolved,6,6095.36,Cost increased
+493,493,Resolved,3,-3222.9,Supplier changed
+494,494,Pending,12,5959.56,Cost increased
+495,495,Partially Resolved,14,7755.33,Cost increased
+496,496,Partially Resolved,10,7439.31,Shipment rerouted
+497,497,Pending,10,6724.73,Minor delay occurred
+498,498,Pending,3,14102.43,Cost increased
+499,499,Failed,6,8682.66,Issue resolved successfully
+500,500,Partially Resolved,4,12751.75,Minor delay occurred
+501,501,Pending,5,6049.48,Issue resolved successfully
+502,502,Resolved,13,8670.46,Supplier changed
+503,503,Pending,6,5496.9,Minor delay occurred
+504,504,Resolved,6,14420.49,Issue resolved successfully
+505,505,Failed,14,9261.43,Shipment rerouted
+506,506,Pending,6,12892.11,Minor delay occurred
+507,507,Pending,0,-496.78,Issue resolved successfully
+508,508,Partially Resolved,11,5951.35,Supplier changed
+509,509,Pending,1,11479.1,Minor delay occurred
+510,510,Failed,4,11554.65,Cost increased
+511,511,Failed,9,10754.79,Supplier changed
+512,512,Failed,8,14358.67,Shipment rerouted
+513,513,Resolved,2,7224.23,Cost increased
+514,514,Failed,11,-2841.76,Minor delay occurred
+515,515,Pending,4,3341.97,Cost increased
+516,516,Resolved,10,-3784.25,Supplier changed
+517,517,Partially Resolved,13,-4723.13,Minor delay occurred
+518,518,Pending,0,-3450.95,Shipment rerouted
+519,519,Partially Resolved,5,1355.97,Minor delay occurred
+520,520,Partially Resolved,12,10929.85,Minor delay occurred
+521,521,Pending,12,2699.68,Issue resolved successfully
+522,522,Pending,12,6188.16,Shipment rerouted
+523,523,Failed,0,12879.78,Shipment rerouted
+524,524,Partially Resolved,15,14654.82,Supplier changed
+525,525,Pending,8,10550.46,Cost increased
+526,526,Failed,3,1998.59,Minor delay occurred
+527,527,Partially Resolved,6,-3574.63,Shipment rerouted
+528,528,Failed,7,4396.04,Cost increased
+529,529,Pending,3,-2849.56,Supplier changed
+530,530,Failed,4,4979.63,Supplier changed
+531,531,Partially Resolved,7,3268.19,Supplier changed
+532,532,Resolved,0,631.03,Minor delay occurred
+533,533,Pending,8,8291.91,Shipment rerouted
+534,534,Failed,0,-1530.62,Cost increased
+535,535,Partially Resolved,7,-1594.75,Issue resolved successfully
+536,536,Failed,3,4221.78,Minor delay occurred
+537,537,Partially Resolved,13,-2623.5,Minor delay occurred
+538,538,Pending,5,12642.43,Shipment rerouted
+539,539,Partially Resolved,14,-3971.56,Shipment rerouted
+540,540,Failed,10,12306.51,Supplier changed
+541,541,Failed,15,13371.59,Supplier changed
+542,542,Resolved,6,5733.05,Cost increased
+543,543,Partially Resolved,5,-3293.53,Supplier changed
+544,544,Pending,5,9647.19,Issue resolved successfully
+545,545,Resolved,10,-2319.74,Supplier changed
+546,546,Failed,7,-1397.86,Supplier changed
+547,547,Resolved,11,-1923.52,Minor delay occurred
+548,548,Partially Resolved,3,11739.21,Minor delay occurred
+549,549,Partially Resolved,14,3570.16,Shipment rerouted
+550,550,Failed,12,14333.33,Cost increased
+551,551,Failed,3,12414.27,Supplier changed
+552,552,Failed,5,-1864.43,Minor delay occurred
+553,553,Failed,13,1149.68,Cost increased
+554,554,Resolved,15,5279.8,Supplier changed
+555,555,Resolved,0,1391.24,Minor delay occurred
+556,556,Failed,6,10653.58,Minor delay occurred
+557,557,Partially Resolved,6,9859.76,Supplier changed
+558,558,Failed,7,13247.04,Shipment rerouted
+559,559,Resolved,15,-2246.9,Shipment rerouted
+560,560,Failed,6,4547.13,Cost increased
+561,561,Failed,3,-2990.07,Supplier changed
+562,562,Resolved,12,6748.56,Supplier changed
+563,563,Pending,3,-1294.14,Shipment rerouted
+564,564,Resolved,7,2010.99,Supplier changed
+565,565,Resolved,3,12077.86,Shipment rerouted
+566,566,Resolved,8,-2989.65,Supplier changed
+567,567,Pending,15,13303.09,Minor delay occurred
+568,568,Failed,10,6486.81,Shipment rerouted
+569,569,Failed,7,2799.43,Shipment rerouted
+570,570,Partially Resolved,12,7203.48,Supplier changed
+571,571,Pending,4,-2581.14,Cost increased
+572,572,Resolved,11,14118.91,Shipment rerouted
+573,573,Failed,13,9872.59,Supplier changed
+574,574,Resolved,14,8793.3,Minor delay occurred
+575,575,Partially Resolved,13,8262.56,Cost increased
+576,576,Pending,5,8652.98,Supplier changed
+577,577,Partially Resolved,14,2546.77,Shipment rerouted
+578,578,Pending,0,-3062.09,Shipment rerouted
+579,579,Resolved,7,11912.74,Shipment rerouted
+580,580,Partially Resolved,6,6503.62,Shipment rerouted
+581,581,Partially Resolved,7,5888.56,Minor delay occurred
+582,582,Failed,0,3654.41,Shipment rerouted
+583,583,Failed,0,5685.07,Shipment rerouted
+584,584,Partially Resolved,12,-4636.57,Shipment rerouted
+585,585,Pending,5,-3019.89,Issue resolved successfully
+586,586,Resolved,0,2518.67,Shipment rerouted
+587,587,Resolved,6,8221.51,Supplier changed
+588,588,Pending,4,-3744.23,Supplier changed
+589,589,Failed,13,3109.76,Issue resolved successfully
+590,590,Failed,13,2246.79,Issue resolved successfully
+591,591,Pending,6,102.65,Minor delay occurred
+592,592,Failed,11,2311.66,Shipment rerouted
+593,593,Partially Resolved,4,-3680.65,Supplier changed
+594,594,Partially Resolved,7,-1122.97,Cost increased
+595,595,Resolved,3,6790.32,Cost increased
+596,596,Pending,9,7374.69,Cost increased
+597,597,Failed,11,3179.16,Issue resolved successfully
+598,598,Partially Resolved,5,13479.38,Shipment rerouted
+599,599,Resolved,5,13059.24,Shipment rerouted
+600,600,Failed,9,5232.32,Shipment rerouted

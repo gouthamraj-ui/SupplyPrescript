@@ -1,0 +1,601 @@
+decision_id,disruption_id,recommended_action,action_taken,decision_date
+1,1,Switch Supplier,Rejected,2025-11-21
+2,2,Expedite Shipment,Pending,2025-11-08
+3,3,Increase Safety Stock,Implemented,2025-12-19
+4,4,Change Transport Route,Rejected,2025-11-09
+5,5,Increase Safety Stock,Pending,2025-10-03
+6,6,Switch Supplier,Implemented,2026-05-13
+7,7,Increase Safety Stock,Pending,2025-09-11
+8,8,Switch Supplier,Approved,2026-05-09
+9,9,Switch Supplier,Rejected,2025-08-01
+10,10,Switch Supplier,Rejected,2026-02-07
+11,11,Change Transport Route,Implemented,2025-09-07
+12,12,Increase Safety Stock,Rejected,2026-07-01
+13,13,Change Transport Route,Pending,2026-06-09
+14,14,Expedite Shipment,Pending,2026-04-26
+15,15,Expedite Shipment,Pending,2026-04-20
+16,16,Expedite Shipment,Implemented,2026-05-26
+17,17,Change Transport Route,Approved,2025-10-18
+18,18,Change Transport Route,Pending,2025-09-11
+19,19,Switch Supplier,Approved,2026-01-03
+20,20,Increase Safety Stock,Approved,2025-08-04
+21,21,Change Transport Route,Pending,2025-09-23
+22,22,Change Transport Route,Rejected,2026-03-30
+23,23,Change Transport Route,Rejected,2026-05-31
+24,24,Increase Safety Stock,Approved,2026-04-28
+25,25,Change Transport Route,Pending,2025-12-15
+26,26,Increase Safety Stock,Implemented,2025-08-01
+27,27,Change Transport Route,Pending,2026-01-04
+28,28,Switch Supplier,Approved,2026-05-25
+29,29,Increase Safety Stock,Implemented,2026-02-27
+30,30,Change Transport Route,Implemented,2026-02-04
+31,31,Expedite Shipment,Rejected,2026-06-18
+32,32,Increase Safety Stock,Approved,2026-03-31
+33,33,Increase Safety Stock,Approved,2026-04-27
+34,34,Increase Safety Stock,Approved,2026-05-23
+35,35,Increase Safety Stock,Pending,2026-04-08
+36,36,Change Transport Route,Implemented,2025-09-26
+37,37,Increase Safety Stock,Pending,2025-11-04
+38,38,Increase Safety Stock,Rejected,2026-03-13
+39,39,Switch Supplier,Approved,2026-07-15
+40,40,Change Transport Route,Pending,2025-12-13
+41,41,Switch Supplier,Rejected,2026-01-24
+42,42,Switch Supplier,Pending,2026-04-26
+43,43,Expedite Shipment,Pending,2025-08-09
+44,44,Change Transport Route,Implemented,2025-07-25
+45,45,Change Transport Route,Approved,2025-09-14
+46,46,Increase Safety Stock,Implemented,2026-06-25
+47,47,Change Transport Route,Rejected,2025-07-28
+48,48,Change Transport Route,Pending,2026-02-06
+49,49,Expedite Shipment,Pending,2026-04-23
+50,50,Expedite Shipment,Pending,2026-04-28
+51,51,Increase Safety Stock,Pending,2026-06-14
+52,52,Increase Safety Stock,Rejected,2025-08-28
+53,53,Switch Supplier,Approved,2026-03-28
+54,54,Expedite Shipment,Pending,2026-01-25
+55,55,Increase Safety Stock,Approved,2025-09-21
+56,56,Expedite Shipment,Pending,2026-04-04
+57,57,Expedite Shipment,Rejected,2025-12-09
+58,58,Expedite Shipment,Rejected,2026-02-16
+59,59,Expedite Shipment,Rejected,2026-06-14
+60,60,Change Transport Route,Pending,2026-03-11
+61,61,Expedite Shipment,Approved,2026-02-12
+62,62,Switch Supplier,Pending,2026-04-03
+63,63,Change Transport Route,Pending,2025-08-02
+64,64,Change Transport Route,Rejected,2026-07-13
+65,65,Expedite Shipment,Pending,2025-11-22
+66,66,Increase Safety Stock,Rejected,2026-05-17
+67,67,Switch Supplier,Pending,2026-05-20
+68,68,Expedite Shipment,Pending,2025-08-07
+69,69,Switch Supplier,Approved,2026-03-20
+70,70,Increase Safety Stock,Approved,2026-01-19
+71,71,Expedite Shipment,Rejected,2026-04-16
+72,72,Increase Safety Stock,Rejected,2026-05-27
+73,73,Switch Supplier,Rejected,2025-12-09
+74,74,Change Transport Route,Implemented,2025-08-26
+75,75,Expedite Shipment,Rejected,2025-12-08
+76,76,Change Transport Route,Pending,2026-06-01
+77,77,Change Transport Route,Rejected,2026-06-08
+78,78,Increase Safety Stock,Rejected,2026-06-25
+79,79,Switch Supplier,Approved,2026-03-20
+80,80,Switch Supplier,Pending,2025-10-23
+81,81,Switch Supplier,Approved,2025-08-17
+82,82,Increase Safety Stock,Implemented,2025-09-20
+83,83,Increase Safety Stock,Rejected,2025-10-23
+84,84,Expedite Shipment,Approved,2025-10-19
+85,85,Expedite Shipment,Approved,2025-11-18
+86,86,Switch Supplier,Rejected,2026-05-25
+87,87,Expedite Shipment,Pending,2026-02-02
+88,88,Change Transport Route,Rejected,2025-09-06
+89,89,Increase Safety Stock,Rejected,2025-09-11
+90,90,Expedite Shipment,Pending,2026-04-10
+91,91,Expedite Shipment,Pending,2026-01-04
+92,92,Change Transport Route,Approved,2025-11-26
+93,93,Expedite Shipment,Pending,2026-06-29
+94,94,Expedite Shipment,Rejected,2025-10-08
+95,95,Switch Supplier,Rejected,2026-01-14
+96,96,Increase Safety Stock,Implemented,2025-08-29
+97,97,Expedite Shipment,Rejected,2026-05-21
+98,98,Expedite Shipment,Pending,2026-05-05
+99,99,Increase Safety Stock,Approved,2026-01-05
+100,100,Switch Supplier,Approved,2025-09-14
+101,101,Increase Safety Stock,Pending,2026-06-17
+102,102,Change Transport Route,Rejected,2025-12-24
+103,103,Expedite Shipment,Implemented,2025-08-08
+104,104,Expedite Shipment,Rejected,2025-08-01
+105,105,Switch Supplier,Implemented,2026-03-10
+106,106,Switch Supplier,Pending,2025-12-16
+107,107,Increase Safety Stock,Rejected,2025-10-28
+108,108,Change Transport Route,Rejected,2026-05-09
+109,109,Increase Safety Stock,Rejected,2025-11-30
+110,110,Expedite Shipment,Rejected,2026-05-21
+111,111,Expedite Shipment,Approved,2026-06-14
+112,112,Expedite Shipment,Rejected,2025-08-13
+113,113,Change Transport Route,Approved,2025-10-02
+114,114,Change Transport Route,Approved,2026-07-09
+115,115,Switch Supplier,Approved,2026-04-14
+116,116,Increase Safety Stock,Pending,2025-11-27
+117,117,Increase Safety Stock,Approved,2026-07-04
+118,118,Change Transport Route,Implemented,2026-03-19
+119,119,Switch Supplier,Rejected,2025-07-27
+120,120,Increase Safety Stock,Pending,2026-05-15
+121,121,Increase Safety Stock,Implemented,2026-01-29
+122,122,Change Transport Route,Approved,2026-04-01
+123,123,Switch Supplier,Pending,2025-08-08
+124,124,Change Transport Route,Pending,2026-07-14
+125,125,Switch Supplier,Approved,2026-04-26
+126,126,Switch Supplier,Rejected,2026-06-16
+127,127,Switch Supplier,Implemented,2025-08-02
+128,128,Increase Safety Stock,Approved,2026-03-01
+129,129,Expedite Shipment,Pending,2025-10-16
+130,130,Change Transport Route,Implemented,2026-03-04
+131,131,Increase Safety Stock,Pending,2025-08-29
+132,132,Increase Safety Stock,Pending,2026-04-26
+133,133,Expedite Shipment,Pending,2026-06-29
+134,134,Switch Supplier,Implemented,2025-09-05
+135,135,Expedite Shipment,Implemented,2025-12-12
+136,136,Switch Supplier,Approved,2026-02-19
+137,137,Expedite Shipment,Implemented,2026-04-27
+138,138,Expedite Shipment,Implemented,2025-09-04
+139,139,Expedite Shipment,Rejected,2025-08-09
+140,140,Switch Supplier,Pending,2026-01-11
+141,141,Expedite Shipment,Rejected,2025-11-08
+142,142,Expedite Shipment,Implemented,2025-12-27
+143,143,Change Transport Route,Implemented,2026-02-26
+144,144,Change Transport Route,Rejected,2026-06-25
+145,145,Switch Supplier,Implemented,2025-11-16
+146,146,Expedite Shipment,Rejected,2026-07-08
+147,147,Switch Supplier,Pending,2026-03-05
+148,148,Change Transport Route,Implemented,2025-07-31
+149,149,Expedite Shipment,Pending,2025-12-30
+150,150,Change Transport Route,Implemented,2025-12-28
+151,151,Switch Supplier,Pending,2025-09-12
+152,152,Switch Supplier,Implemented,2026-01-07
+153,153,Change Transport Route,Implemented,2026-02-09
+154,154,Expedite Shipment,Implemented,2026-07-08
+155,155,Switch Supplier,Pending,2025-08-16
+156,156,Change Transport Route,Rejected,2026-01-02
+157,157,Expedite Shipment,Approved,2025-10-24
+158,158,Switch Supplier,Pending,2026-05-29
+159,159,Switch Supplier,Pending,2026-01-06
+160,160,Expedite Shipment,Approved,2025-12-25
+161,161,Expedite Shipment,Pending,2026-04-13
+162,162,Increase Safety Stock,Approved,2026-01-17
+163,163,Increase Safety Stock,Pending,2025-11-05
+164,164,Increase Safety Stock,Approved,2026-04-26
+165,165,Switch Supplier,Pending,2025-08-09
+166,166,Expedite Shipment,Pending,2026-01-07
+167,167,Expedite Shipment,Implemented,2025-10-11
+168,168,Switch Supplier,Implemented,2025-11-24
+169,169,Switch Supplier,Pending,2026-02-11
+170,170,Switch Supplier,Rejected,2026-04-03
+171,171,Switch Supplier,Rejected,2026-03-11
+172,172,Expedite Shipment,Approved,2026-03-12
+173,173,Expedite Shipment,Rejected,2026-01-23
+174,174,Expedite Shipment,Implemented,2026-01-15
+175,175,Switch Supplier,Rejected,2026-01-05
+176,176,Change Transport Route,Pending,2026-04-17
+177,177,Switch Supplier,Pending,2025-07-26
+178,178,Expedite Shipment,Pending,2026-02-19
+179,179,Increase Safety Stock,Rejected,2025-10-05
+180,180,Increase Safety Stock,Rejected,2025-07-15
+181,181,Switch Supplier,Approved,2026-03-08
+182,182,Increase Safety Stock,Implemented,2026-01-14
+183,183,Change Transport Route,Approved,2025-09-05
+184,184,Expedite Shipment,Pending,2026-04-24
+185,185,Switch Supplier,Pending,2025-07-16
+186,186,Switch Supplier,Pending,2026-04-18
+187,187,Change Transport Route,Approved,2026-03-13
+188,188,Increase Safety Stock,Pending,2026-02-15
+189,189,Change Transport Route,Approved,2026-02-08
+190,190,Switch Supplier,Approved,2026-02-09
+191,191,Change Transport Route,Approved,2026-03-05
+192,192,Switch Supplier,Rejected,2025-08-18
+193,193,Expedite Shipment,Pending,2025-12-11
+194,194,Increase Safety Stock,Rejected,2026-01-15
+195,195,Switch Supplier,Pending,2026-06-25
+196,196,Increase Safety Stock,Rejected,2025-08-04
+197,197,Expedite Shipment,Pending,2026-06-30
+198,198,Change Transport Route,Approved,2025-11-20
+199,199,Increase Safety Stock,Rejected,2026-01-07
+200,200,Change Transport Route,Pending,2026-01-03
+201,201,Change Transport Route,Implemented,2025-10-27
+202,202,Expedite Shipment,Implemented,2026-04-18
+203,203,Change Transport Route,Rejected,2025-07-26
+204,204,Change Transport Route,Rejected,2026-04-22
+205,205,Expedite Shipment,Pending,2026-02-09
+206,206,Switch Supplier,Implemented,2026-02-28
+207,207,Increase Safety Stock,Implemented,2025-12-03
+208,208,Change Transport Route,Approved,2026-02-05
+209,209,Switch Supplier,Approved,2025-10-11
+210,210,Expedite Shipment,Implemented,2025-11-29
+211,211,Increase Safety Stock,Rejected,2025-09-13
+212,212,Expedite Shipment,Pending,2025-11-17
+213,213,Switch Supplier,Rejected,2026-05-13
+214,214,Switch Supplier,Rejected,2025-12-13
+215,215,Change Transport Route,Approved,2025-11-11
+216,216,Expedite Shipment,Pending,2026-02-02
+217,217,Switch Supplier,Approved,2025-09-06
+218,218,Change Transport Route,Approved,2025-12-01
+219,219,Expedite Shipment,Rejected,2025-09-29
+220,220,Increase Safety Stock,Implemented,2026-04-23
+221,221,Switch Supplier,Approved,2025-09-23
+222,222,Switch Supplier,Approved,2025-11-24
+223,223,Change Transport Route,Implemented,2025-08-19
+224,224,Change Transport Route,Approved,2026-06-01
+225,225,Change Transport Route,Approved,2026-02-23
+226,226,Switch Supplier,Implemented,2025-11-05
+227,227,Change Transport Route,Implemented,2026-03-10
+228,228,Switch Supplier,Pending,2026-01-21
+229,229,Change Transport Route,Rejected,2025-08-16
+230,230,Switch Supplier,Implemented,2025-10-20
+231,231,Expedite Shipment,Approved,2025-12-23
+232,232,Change Transport Route,Implemented,2026-01-13
+233,233,Switch Supplier,Pending,2026-05-23
+234,234,Expedite Shipment,Implemented,2025-12-18
+235,235,Expedite Shipment,Pending,2026-06-10
+236,236,Expedite Shipment,Implemented,2026-04-05
+237,237,Increase Safety Stock,Approved,2025-08-17
+238,238,Increase Safety Stock,Pending,2025-10-10
+239,239,Change Transport Route,Approved,2026-05-27
+240,240,Change Transport Route,Rejected,2025-12-13
+241,241,Switch Supplier,Approved,2025-11-05
+242,242,Change Transport Route,Implemented,2025-08-03
+243,243,Expedite Shipment,Approved,2026-04-29
+244,244,Switch Supplier,Pending,2026-06-10
+245,245,Increase Safety Stock,Pending,2026-04-19
+246,246,Increase Safety Stock,Pending,2026-01-03
+247,247,Change Transport Route,Rejected,2026-01-02
+248,248,Change Transport Route,Approved,2025-12-04
+249,249,Increase Safety Stock,Implemented,2025-11-10
+250,250,Switch Supplier,Approved,2026-02-23
+251,251,Increase Safety Stock,Implemented,2025-08-24
+252,252,Expedite Shipment,Implemented,2026-04-04
+253,253,Increase Safety Stock,Pending,2025-11-24
+254,254,Switch Supplier,Approved,2026-05-20
+255,255,Increase Safety Stock,Pending,2026-04-10
+256,256,Increase Safety Stock,Rejected,2026-03-14
+257,257,Switch Supplier,Implemented,2025-10-19
+258,258,Increase Safety Stock,Implemented,2025-10-02
+259,259,Increase Safety Stock,Rejected,2025-08-04
+260,260,Increase Safety Stock,Approved,2025-10-31
+261,261,Increase Safety Stock,Rejected,2025-12-25
+262,262,Increase Safety Stock,Implemented,2025-11-12
+263,263,Increase Safety Stock,Approved,2025-10-14
+264,264,Increase Safety Stock,Approved,2025-10-28
+265,265,Switch Supplier,Approved,2026-02-05
+266,266,Expedite Shipment,Implemented,2026-07-12
+267,267,Expedite Shipment,Implemented,2026-01-07
+268,268,Expedite Shipment,Rejected,2026-03-13
+269,269,Increase Safety Stock,Approved,2026-04-12
+270,270,Change Transport Route,Rejected,2026-04-24
+271,271,Expedite Shipment,Rejected,2026-06-19
+272,272,Change Transport Route,Rejected,2026-04-08
+273,273,Change Transport Route,Pending,2025-11-17
+274,274,Switch Supplier,Rejected,2025-10-18
+275,275,Change Transport Route,Implemented,2026-01-18
+276,276,Switch Supplier,Pending,2025-07-15
+277,277,Switch Supplier,Implemented,2026-05-12
+278,278,Expedite Shipment,Implemented,2026-02-09
+279,279,Switch Supplier,Pending,2025-08-20
+280,280,Switch Supplier,Pending,2026-01-02
+281,281,Switch Supplier,Rejected,2025-12-05
+282,282,Change Transport Route,Approved,2026-05-19
+283,283,Increase Safety Stock,Approved,2026-04-22
+284,284,Increase Safety Stock,Implemented,2025-08-30
+285,285,Switch Supplier,Approved,2025-12-04
+286,286,Increase Safety Stock,Implemented,2025-09-17
+287,287,Change Transport Route,Rejected,2026-02-15
+288,288,Change Transport Route,Pending,2026-03-02
+289,289,Expedite Shipment,Rejected,2025-08-20
+290,290,Switch Supplier,Pending,2025-10-18
+291,291,Change Transport Route,Implemented,2025-11-22
+292,292,Expedite Shipment,Rejected,2025-11-28
+293,293,Expedite Shipment,Implemented,2025-08-02
+294,294,Expedite Shipment,Pending,2025-10-25
+295,295,Change Transport Route,Implemented,2025-08-11
+296,296,Increase Safety Stock,Pending,2025-10-01
+297,297,Change Transport Route,Implemented,2026-03-24
+298,298,Change Transport Route,Approved,2025-12-17
+299,299,Increase Safety Stock,Implemented,2025-12-24
+300,300,Switch Supplier,Pending,2026-06-21
+301,301,Switch Supplier,Approved,2025-10-26
+302,302,Change Transport Route,Implemented,2025-10-03
+303,303,Expedite Shipment,Pending,2025-12-01
+304,304,Expedite Shipment,Rejected,2025-11-27
+305,305,Expedite Shipment,Implemented,2026-06-18
+306,306,Expedite Shipment,Pending,2025-07-27
+307,307,Switch Supplier,Rejected,2025-10-01
+308,308,Change Transport Route,Implemented,2025-08-13
+309,309,Increase Safety Stock,Implemented,2025-11-18
+310,310,Expedite Shipment,Implemented,2025-07-29
+311,311,Switch Supplier,Approved,2026-03-12
+312,312,Change Transport Route,Rejected,2026-01-21
+313,313,Expedite Shipment,Pending,2025-10-31
+314,314,Change Transport Route,Implemented,2026-01-28
+315,315,Switch Supplier,Rejected,2025-10-11
+316,316,Switch Supplier,Rejected,2026-03-09
+317,317,Increase Safety Stock,Approved,2026-01-14
+318,318,Increase Safety Stock,Approved,2026-05-02
+319,319,Expedite Shipment,Rejected,2026-01-15
+320,320,Switch Supplier,Pending,2025-11-23
+321,321,Change Transport Route,Pending,2026-06-20
+322,322,Change Transport Route,Rejected,2025-08-10
+323,323,Increase Safety Stock,Approved,2026-02-04
+324,324,Switch Supplier,Approved,2025-08-27
+325,325,Switch Supplier,Approved,2026-05-08
+326,326,Change Transport Route,Rejected,2025-09-21
+327,327,Increase Safety Stock,Rejected,2025-12-15
+328,328,Switch Supplier,Pending,2025-12-17
+329,329,Switch Supplier,Approved,2025-11-29
+330,330,Change Transport Route,Pending,2026-01-17
+331,331,Expedite Shipment,Rejected,2026-02-03
+332,332,Increase Safety Stock,Implemented,2026-07-06
+333,333,Change Transport Route,Approved,2025-10-18
+334,334,Switch Supplier,Rejected,2026-01-18
+335,335,Increase Safety Stock,Implemented,2025-10-26
+336,336,Switch Supplier,Rejected,2026-07-05
+337,337,Change Transport Route,Pending,2025-10-02
+338,338,Expedite Shipment,Rejected,2025-09-28
+339,339,Change Transport Route,Pending,2025-08-14
+340,340,Expedite Shipment,Approved,2026-05-13
+341,341,Expedite Shipment,Approved,2025-10-09
+342,342,Increase Safety Stock,Implemented,2025-11-26
+343,343,Increase Safety Stock,Rejected,2025-11-09
+344,344,Expedite Shipment,Pending,2026-03-02
+345,345,Increase Safety Stock,Approved,2026-05-18
+346,346,Change Transport Route,Rejected,2026-03-07
+347,347,Change Transport Route,Approved,2026-04-12
+348,348,Increase Safety Stock,Pending,2025-11-02
+349,349,Change Transport Route,Rejected,2026-03-17
+350,350,Increase Safety Stock,Rejected,2025-12-02
+351,351,Switch Supplier,Rejected,2026-02-07
+352,352,Increase Safety Stock,Implemented,2026-05-19
+353,353,Increase Safety Stock,Rejected,2025-11-01
+354,354,Increase Safety Stock,Rejected,2026-03-12
+355,355,Switch Supplier,Approved,2026-01-01
+356,356,Change Transport Route,Implemented,2026-07-08
+357,357,Expedite Shipment,Rejected,2026-05-21
+358,358,Switch Supplier,Rejected,2026-01-18
+359,359,Increase Safety Stock,Approved,2025-09-03
+360,360,Increase Safety Stock,Implemented,2025-09-30
+361,361,Change Transport Route,Approved,2026-03-29
+362,362,Increase Safety Stock,Implemented,2026-04-21
+363,363,Increase Safety Stock,Implemented,2025-10-19
+364,364,Increase Safety Stock,Pending,2026-01-17
+365,365,Expedite Shipment,Rejected,2026-02-12
+366,366,Change Transport Route,Rejected,2026-05-11
+367,367,Change Transport Route,Implemented,2026-04-14
+368,368,Switch Supplier,Implemented,2026-06-20
+369,369,Change Transport Route,Rejected,2026-04-22
+370,370,Increase Safety Stock,Pending,2026-03-02
+371,371,Change Transport Route,Pending,2025-08-10
+372,372,Expedite Shipment,Approved,2026-02-18
+373,373,Increase Safety Stock,Rejected,2026-06-25
+374,374,Increase Safety Stock,Pending,2025-09-10
+375,375,Switch Supplier,Approved,2026-03-14
+376,376,Increase Safety Stock,Implemented,2025-10-31
+377,377,Increase Safety Stock,Approved,2026-04-04
+378,378,Change Transport Route,Approved,2025-10-14
+379,379,Expedite Shipment,Implemented,2026-02-26
+380,380,Increase Safety Stock,Pending,2026-01-26
+381,381,Increase Safety Stock,Pending,2026-04-14
+382,382,Switch Supplier,Rejected,2026-01-11
+383,383,Switch Supplier,Pending,2025-11-29
+384,384,Change Transport Route,Rejected,2026-04-15
+385,385,Change Transport Route,Pending,2025-08-04
+386,386,Expedite Shipment,Implemented,2026-06-30
+387,387,Change Transport Route,Pending,2026-04-29
+388,388,Change Transport Route,Approved,2026-06-02
+389,389,Expedite Shipment,Pending,2026-07-13
+390,390,Change Transport Route,Rejected,2026-07-09
+391,391,Increase Safety Stock,Approved,2025-09-20
+392,392,Expedite Shipment,Implemented,2025-07-21
+393,393,Change Transport Route,Approved,2026-07-02
+394,394,Expedite Shipment,Rejected,2025-07-29
+395,395,Expedite Shipment,Rejected,2025-12-20
+396,396,Switch Supplier,Approved,2025-08-31
+397,397,Expedite Shipment,Approved,2026-05-25
+398,398,Switch Supplier,Pending,2026-04-05
+399,399,Expedite Shipment,Approved,2025-09-21
+400,400,Expedite Shipment,Implemented,2026-02-10
+401,401,Switch Supplier,Approved,2025-12-04
+402,402,Increase Safety Stock,Implemented,2025-12-03
+403,403,Switch Supplier,Rejected,2025-08-29
+404,404,Change Transport Route,Implemented,2025-08-31
+405,405,Expedite Shipment,Approved,2025-07-26
+406,406,Increase Safety Stock,Approved,2025-11-12
+407,407,Change Transport Route,Pending,2025-10-25
+408,408,Increase Safety Stock,Approved,2026-04-15
+409,409,Increase Safety Stock,Implemented,2025-11-15
+410,410,Increase Safety Stock,Approved,2025-10-18
+411,411,Increase Safety Stock,Pending,2026-04-20
+412,412,Expedite Shipment,Implemented,2025-10-20
+413,413,Expedite Shipment,Pending,2025-10-09
+414,414,Switch Supplier,Implemented,2025-07-17
+415,415,Switch Supplier,Pending,2026-04-14
+416,416,Switch Supplier,Approved,2025-11-06
+417,417,Switch Supplier,Pending,2026-07-06
+418,418,Increase Safety Stock,Approved,2026-04-07
+419,419,Switch Supplier,Implemented,2025-12-21
+420,420,Change Transport Route,Pending,2025-09-14
+421,421,Switch Supplier,Approved,2025-09-21
+422,422,Increase Safety Stock,Rejected,2025-12-02
+423,423,Change Transport Route,Pending,2025-10-25
+424,424,Switch Supplier,Implemented,2025-09-30
+425,425,Increase Safety Stock,Rejected,2025-11-12
+426,426,Change Transport Route,Approved,2025-09-11
+427,427,Expedite Shipment,Pending,2025-07-27
+428,428,Increase Safety Stock,Implemented,2026-04-06
+429,429,Expedite Shipment,Rejected,2026-02-20
+430,430,Change Transport Route,Pending,2026-03-30
+431,431,Switch Supplier,Approved,2026-07-11
+432,432,Increase Safety Stock,Pending,2026-07-02
+433,433,Switch Supplier,Rejected,2025-12-19
+434,434,Increase Safety Stock,Rejected,2025-08-19
+435,435,Change Transport Route,Implemented,2026-03-09
+436,436,Increase Safety Stock,Rejected,2025-10-08
+437,437,Increase Safety Stock,Rejected,2026-05-11
+438,438,Expedite Shipment,Rejected,2025-12-31
+439,439,Increase Safety Stock,Pending,2025-12-10
+440,440,Expedite Shipment,Implemented,2025-10-22
+441,441,Change Transport Route,Rejected,2026-05-17
+442,442,Increase Safety Stock,Rejected,2026-06-02
+443,443,Expedite Shipment,Implemented,2025-09-18
+444,444,Change Transport Route,Implemented,2026-01-03
+445,445,Change Transport Route,Approved,2025-10-02
+446,446,Switch Supplier,Pending,2026-04-09
+447,447,Increase Safety Stock,Approved,2026-07-07
+448,448,Change Transport Route,Rejected,2025-10-07
+449,449,Change Transport Route,Rejected,2025-11-26
+450,450,Change Transport Route,Implemented,2025-10-13
+451,451,Increase Safety Stock,Rejected,2026-05-20
+452,452,Increase Safety Stock,Rejected,2026-06-20
+453,453,Expedite Shipment,Rejected,2026-04-13
+454,454,Change Transport Route,Approved,2026-02-10
+455,455,Change Transport Route,Rejected,2026-01-10
+456,456,Expedite Shipment,Approved,2025-09-24
+457,457,Switch Supplier,Pending,2025-09-13
+458,458,Expedite Shipment,Approved,2026-02-06
+459,459,Switch Supplier,Implemented,2025-12-27
+460,460,Increase Safety Stock,Approved,2026-05-23
+461,461,Switch Supplier,Pending,2025-12-31
+462,462,Switch Supplier,Approved,2026-03-31
+463,463,Increase Safety Stock,Pending,2025-11-10
+464,464,Switch Supplier,Implemented,2026-02-05
+465,465,Increase Safety Stock,Rejected,2025-12-08
+466,466,Expedite Shipment,Pending,2025-08-12
+467,467,Expedite Shipment,Pending,2026-01-27
+468,468,Increase Safety Stock,Implemented,2025-07-26
+469,469,Change Transport Route,Rejected,2026-06-19
+470,470,Switch Supplier,Pending,2025-07-29
+471,471,Switch Supplier,Implemented,2026-01-19
+472,472,Switch Supplier,Approved,2026-04-06
+473,473,Change Transport Route,Rejected,2026-02-17
+474,474,Increase Safety Stock,Rejected,2025-10-03
+475,475,Change Transport Route,Approved,2026-04-22
+476,476,Change Transport Route,Pending,2025-08-03
+477,477,Increase Safety Stock,Rejected,2025-09-21
+478,478,Switch Supplier,Approved,2025-12-25
+479,479,Change Transport Route,Rejected,2026-02-22
+480,480,Increase Safety Stock,Approved,2025-09-18
+481,481,Change Transport Route,Rejected,2026-05-02
+482,482,Expedite Shipment,Approved,2025-09-24
+483,483,Increase Safety Stock,Pending,2025-08-04
+484,484,Increase Safety Stock,Implemented,2026-06-21
+485,485,Expedite Shipment,Approved,2025-11-06
+486,486,Increase Safety Stock,Rejected,2025-11-16
+487,487,Switch Supplier,Approved,2026-01-31
+488,488,Switch Supplier,Approved,2025-11-26
+489,489,Switch Supplier,Implemented,2025-10-11
+490,490,Switch Supplier,Pending,2026-06-06
+491,491,Expedite Shipment,Approved,2026-02-20
+492,492,Switch Supplier,Implemented,2025-09-10
+493,493,Switch Supplier,Rejected,2025-08-01
+494,494,Change Transport Route,Rejected,2026-03-10
+495,495,Change Transport Route,Approved,2025-09-07
+496,496,Switch Supplier,Rejected,2026-05-27
+497,497,Increase Safety Stock,Implemented,2026-04-07
+498,498,Increase Safety Stock,Rejected,2026-05-08
+499,499,Increase Safety Stock,Approved,2025-12-29
+500,500,Change Transport Route,Implemented,2025-08-11
+501,501,Change Transport Route,Approved,2026-06-11
+502,502,Expedite Shipment,Rejected,2025-11-30
+503,503,Expedite Shipment,Approved,2026-04-21
+504,504,Increase Safety Stock,Approved,2025-11-05
+505,505,Switch Supplier,Rejected,2026-02-04
+506,506,Switch Supplier,Implemented,2025-08-04
+507,507,Change Transport Route,Pending,2026-05-31
+508,508,Switch Supplier,Rejected,2026-04-08
+509,509,Change Transport Route,Implemented,2025-07-18
+510,510,Change Transport Route,Pending,2025-11-02
+511,511,Change Transport Route,Pending,2025-12-16
+512,512,Expedite Shipment,Pending,2025-10-03
+513,513,Expedite Shipment,Approved,2025-08-20
+514,514,Switch Supplier,Approved,2025-12-24
+515,515,Increase Safety Stock,Rejected,2025-08-29
+516,516,Change Transport Route,Pending,2026-07-09
+517,517,Increase Safety Stock,Implemented,2026-06-06
+518,518,Increase Safety Stock,Approved,2025-08-12
+519,519,Change Transport Route,Implemented,2025-09-13
+520,520,Increase Safety Stock,Rejected,2026-06-14
+521,521,Increase Safety Stock,Rejected,2026-05-27
+522,522,Increase Safety Stock,Pending,2026-03-23
+523,523,Expedite Shipment,Rejected,2026-04-25
+524,524,Switch Supplier,Implemented,2025-08-15
+525,525,Increase Safety Stock,Rejected,2025-11-21
+526,526,Expedite Shipment,Rejected,2026-04-04
+527,527,Expedite Shipment,Implemented,2025-11-09
+528,528,Change Transport Route,Pending,2025-11-14
+529,529,Change Transport Route,Pending,2026-01-16
+530,530,Increase Safety Stock,Rejected,2026-02-07
+531,531,Expedite Shipment,Pending,2025-11-11
+532,532,Expedite Shipment,Approved,2025-08-18
+533,533,Change Transport Route,Rejected,2025-08-04
+534,534,Switch Supplier,Rejected,2025-08-31
+535,535,Switch Supplier,Rejected,2025-11-02
+536,536,Switch Supplier,Implemented,2025-08-10
+537,537,Switch Supplier,Pending,2026-03-02
+538,538,Increase Safety Stock,Approved,2025-09-26
+539,539,Change Transport Route,Pending,2025-07-18
+540,540,Change Transport Route,Implemented,2026-07-14
+541,541,Expedite Shipment,Rejected,2026-05-16
+542,542,Increase Safety Stock,Implemented,2025-12-25
+543,543,Increase Safety Stock,Implemented,2026-04-03
+544,544,Increase Safety Stock,Approved,2026-06-04
+545,545,Change Transport Route,Implemented,2025-11-04
+546,546,Switch Supplier,Approved,2026-01-19
+547,547,Increase Safety Stock,Approved,2025-10-29
+548,548,Expedite Shipment,Approved,2025-12-13
+549,549,Expedite Shipment,Implemented,2025-12-19
+550,550,Increase Safety Stock,Pending,2026-04-02
+551,551,Expedite Shipment,Pending,2026-06-14
+552,552,Change Transport Route,Rejected,2025-09-22
+553,553,Increase Safety Stock,Approved,2026-07-08
+554,554,Expedite Shipment,Implemented,2025-09-04
+555,555,Increase Safety Stock,Pending,2026-03-08
+556,556,Switch Supplier,Pending,2025-08-10
+557,557,Expedite Shipment,Pending,2026-04-08
+558,558,Switch Supplier,Implemented,2025-11-12
+559,559,Change Transport Route,Implemented,2025-11-16
+560,560,Switch Supplier,Approved,2026-06-27
+561,561,Expedite Shipment,Rejected,2025-11-13
+562,562,Expedite Shipment,Pending,2026-05-12
+563,563,Increase Safety Stock,Implemented,2025-10-07
+564,564,Increase Safety Stock,Implemented,2025-10-16
+565,565,Increase Safety Stock,Rejected,2025-11-16
+566,566,Expedite Shipment,Pending,2025-10-04
+567,567,Change Transport Route,Implemented,2025-07-19
+568,568,Increase Safety Stock,Implemented,2025-09-17
+569,569,Switch Supplier,Approved,2026-01-02
+570,570,Expedite Shipment,Implemented,2026-06-28
+571,571,Expedite Shipment,Implemented,2025-12-09
+572,572,Switch Supplier,Approved,2025-11-30
+573,573,Increase Safety Stock,Pending,2026-02-25
+574,574,Increase Safety Stock,Implemented,2026-05-15
+575,575,Switch Supplier,Rejected,2026-04-18
+576,576,Expedite Shipment,Pending,2025-12-31
+577,577,Switch Supplier,Approved,2026-04-10
+578,578,Expedite Shipment,Approved,2025-08-17
+579,579,Change Transport Route,Implemented,2025-08-04
+580,580,Increase Safety Stock,Approved,2025-07-25
+581,581,Switch Supplier,Pending,2025-11-12
+582,582,Expedite Shipment,Pending,2026-06-27
+583,583,Expedite Shipment,Pending,2025-08-24
+584,584,Switch Supplier,Approved,2025-11-23
+585,585,Expedite Shipment,Rejected,2026-05-19
+586,586,Change Transport Route,Implemented,2025-12-26
+587,587,Change Transport Route,Implemented,2026-01-30
+588,588,Increase Safety Stock,Approved,2025-12-14
+589,589,Expedite Shipment,Implemented,2025-12-13
+590,590,Increase Safety Stock,Approved,2025-09-29
+591,591,Switch Supplier,Approved,2026-04-28
+592,592,Increase Safety Stock,Implemented,2025-11-21
+593,593,Increase Safety Stock,Approved,2025-12-06
+594,594,Switch Supplier,Pending,2025-09-07
+595,595,Switch Supplier,Rejected,2026-03-11
+596,596,Change Transport Route,Pending,2026-03-05
+597,597,Switch Supplier,Rejected,2025-11-25
+598,598,Change Transport Route,Implemented,2026-01-05
+599,599,Switch Supplier,Approved,2026-02-15
+600,600,Change Transport Route,Rejected,2026-01-14
