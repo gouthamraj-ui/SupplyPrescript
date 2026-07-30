@@ -24,6 +24,55 @@ class Shipment(BaseModel):
 def home():
     return {"message": "SupplyPrescript API is Running"}
 
+#---------------------Health API---------------------------
+@app.get("/health")
+def health():
+    return {
+        "status" : "Healthy",
+        "service" : "Supplyprescript API"
+    }
+
+
+# -------------------- Recommendations API --------------------
+
+recommendations = [
+    {
+        "shipment_id": 101,
+        "action": "Change Supplier",
+        "saving": 5000
+    },
+    {
+        "shipment_id": 102,
+        "action": "Increase Inventory",
+        "saving": 3000
+    }
+]
+
+@app.get("/recommendations")
+def get_recommendations():
+    return recommendations
+
+
+# -------------------- Model Info API --------------------
+
+@app.get("/model-info")
+def model_info():
+    return {
+        "model": "Random Forest",
+        "version": "1.0",
+        "features": [
+            "shipment_quantity",
+            "unit_price",
+            "lead_time",
+            "stock_quantity",
+            "rating",
+            "shipment_value",
+            "supplier_avg_delay"
+        ]
+    }
+
+
+# -------------------- Prediction API --------------------
 
 @app.post("/predict")
 def predict(data: Shipment):
@@ -52,6 +101,8 @@ def predict(data: Shipment):
     return {
         "prediction": "Delayed" if prediction == 1 else "On Time",
         "delay_probability": round(float(probability), 4),
+        "confidence": round(float(probability * 100), 2),
         "recommended_action": recommendation["recommended_action"],
         "estimated_saving": recommendation["estimated_saving"]
     }
+
