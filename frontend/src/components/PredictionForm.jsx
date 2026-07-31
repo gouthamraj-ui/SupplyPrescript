@@ -1,8 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
+import ResultCard from "./ResultCard";
 
 function PredictionForm() {
-
   const [formData, setFormData] = useState({
     shipment_quantity: "",
     unit_price: "",
@@ -37,45 +37,59 @@ function PredictionForm() {
     <>
       <form onSubmit={handleSubmit}>
 
+        <label>Shipment Quantity</label>
         <input
+          type="number"
           name="shipment_quantity"
-          placeholder="Shipment Quantity"
+          value={formData.shipment_quantity}
           onChange={handleChange}
         />
 
+        <label>Unit Price</label>
         <input
+          type="number"
           name="unit_price"
-          placeholder="Unit Price"
+          value={formData.unit_price}
           onChange={handleChange}
         />
 
+        <label>Lead Time</label>
         <input
+          type="number"
           name="lead_time"
-          placeholder="Lead Time"
+          value={formData.lead_time}
           onChange={handleChange}
         />
 
+        <label>Stock Quantity</label>
         <input
+          type="number"
           name="stock_quantity"
-          placeholder="Stock Quantity"
+          value={formData.stock_quantity}
           onChange={handleChange}
         />
 
+        <label>Rating</label>
         <input
+          type="number"
           name="rating"
-          placeholder="Rating"
+          value={formData.rating}
           onChange={handleChange}
         />
 
+        <label>Shipment Value</label>
         <input
+          type="number"
           name="shipment_value"
-          placeholder="Shipment Value"
+          value={formData.shipment_value}
           onChange={handleChange}
         />
 
+        <label>Supplier Average Delay</label>
         <input
+          type="number"
           name="supplier_avg_delay"
-          placeholder="Supplier Avg Delay"
+          value={formData.supplier_avg_delay}
           onChange={handleChange}
         />
 
@@ -85,34 +99,7 @@ function PredictionForm() {
 
       </form>
 
-      {result && (
-        <div>
-
-          <h2>Prediction Result</h2>
-
-          <p>
-            Prediction: {result.prediction}
-          </p>
-
-          <p>
-            Delay Probability: {result.delay_probability}
-          </p>
-
-          <p>
-            Confidence: {result.confidence}%
-          </p>
-
-          <p>
-            Recommendation: {result.recommended_action}
-          </p>
-
-          <p>
-            Estimated Saving: ₹{result.estimated_saving}
-          </p>
-
-        </div>
-      )}
-
+      <ResultCard result={result} />
     </>
   );
 }

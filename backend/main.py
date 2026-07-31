@@ -1,9 +1,10 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 import pandas as pd
 
+from backend.db_connection import get_connection
 from backend.recommendation import get_recommendation
 
 app = FastAPI()
@@ -33,12 +34,14 @@ class Shipment(BaseModel):
 def home():
     return {"message": "SupplyPrescript API is Running"}
 
-#---------------------Health API---------------------------
+
+# --------------------- Health API ---------------------
+
 @app.get("/health")
 def health():
     return {
-        "status" : "Healthy",
-        "service" : "Supplyprescript API"
+        "status": "Healthy",
+        "service": "SupplyPrescript API"
     }
 
 
@@ -56,6 +59,7 @@ recommendations = [
         "saving": 3000
     }
 ]
+
 
 @app.get("/recommendations")
 def get_recommendations():
@@ -99,6 +103,9 @@ def predict(data: Shipment):
     prediction = model.predict(sample)[0]
     probability = model.predict_proba(sample)[0][1]
 
+    delay_probability = round(float(probability), 4)
+    confidence = round(float(probability * 100), 2)
+
     recommendation = get_recommendation(
         prediction,
         data.supplier_avg_delay,
@@ -107,11 +114,85 @@ def predict(data: Shipment):
         data.rating
     )
 
+    # ---------------- Save Prediction ----------------
+
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    query = """
+    INSERT INTO predict_decisions (
+        shipment_quantity,
+        unit_price,
+        lead_time,
+        stock_quantity,
+        rating,
+        shipment_value,
+        supplier_avg_delay,
+        prediction,
+        delay_probability,
+        confidence,
+        recommended_action,
+        estimated_saving
+    )
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+
+    values = (
+        data.shipment_quantity,
+        data.unit_price,
+        data.lead_time,
+        data.stock_quantity,
+        data.rating,
+        data.shipment_value,
+        data.supplier_avg_delay,
+        "Delayed" if prediction == 1 else "On Time",
+        delay_probability,
+        confidence,
+        recommendation["recommended_action"],
+        recommendation["estimated_saving"]
+    )
+
+    cursor.execute(query, values)
+    conn.commit()
+
+    cursor.close()
+    conn.close()
+
+    # ---------------- API Response ----------------
+
     return {
         "prediction": "Delayed" if prediction == 1 else "On Time",
-        "delay_probability": round(float(probability), 4),
-        "confidence": round(float(probability * 100), 2),
+        "delay_probability": delay_probability,
+        "confidence": confidence,
         "recommended_action": recommendation["recommended_action"],
         "estimated_saving": recommendation["estimated_saving"]
     }
+
+# -------------------- Decision History API --------------------
+
+@app.get("/decisions")
+def get_decisions():
+    try:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        cursor.execute("""
+            SELECT *
+            FROM predict_decisions
+            ORDER BY created_at DESC
+        """)
+
+        decisions = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return decisions
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+
+
 
