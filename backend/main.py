@@ -3,7 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 import pandas as pd
-
 from backend.db_connection import get_connection
 from backend.recommendation import get_recommendation
 
@@ -28,6 +27,12 @@ class Shipment(BaseModel):
     rating: float
     shipment_value: float
     supplier_avg_delay: float
+
+class OutcomeRequest(BaseModel):
+    decision_id: int
+    outcome_status: str
+    actual_delay: float
+    comments: str
 
 
 @app.get("/")
@@ -191,6 +196,77 @@ def get_decisions():
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/outcomes")
+def save_outcome(data: OutcomeRequest):
+    try:
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = """
+        INSERT INTO post_outcomes
+        (
+            decision_id,
+            outcome_status,
+            actual_delay,
+            comments
+        )
+        VALUES (%s, %s, %s, %s)
+        """
+
+        values = (
+            data.decision_id,
+            data.outcome_status,
+            data.actual_delay,
+            data.comments
+        )
+
+        cursor.execute(query, values)
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+        return {
+            "message": "Outcome saved successfully"
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/outcomes")
+def get_outcomes():
+    try:
+        conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
+
+        cursor.execute("""
+            SELECT
+                o.outcome_id,
+                o.decision_id,
+                d.prediction,
+                d.recommended_action,
+                o.outcome_status,
+                o.actual_delay,
+                o.comments,
+                o.recorded_at
+            FROM post_outcomes o
+            JOIN predict_decisions d
+                ON o.decision_id = d.decision_id
+            ORDER BY o.recorded_at DESC
+        """)
+
+        outcomes = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return outcomes
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 
 
