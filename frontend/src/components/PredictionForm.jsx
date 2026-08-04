@@ -14,6 +14,7 @@ function PredictionForm() {
   });
 
   const [result, setResult] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -23,14 +24,98 @@ function PredictionForm() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const response = await axios.post(
-      "http://127.0.0.1:8000/predict",
-      formData
-    );
+  // Required Field Validation
+  if (!formData.shipment_quantity) {
+    alert("Shipment Quantity is required");
+    return;
+  }
 
-    setResult(response.data);
+  if (!formData.unit_price) {
+    alert("Unit Price is required");
+    return;
+  }
+
+  if (!formData.lead_time) {
+    alert("Lead Time is required");
+    return;
+  }
+
+  if (!formData.stock_quantity) {
+    alert("Stock Quantity is required");
+    return;
+  }
+
+  if (!formData.rating) {
+    alert("Rating is required");
+    return;
+  }
+
+  if (!formData.shipment_value) {
+    alert("Shipment Value is required");
+    return;
+  }
+
+  if (!formData.supplier_avg_delay) {
+    alert("Supplier Average Delay is required");
+    return;
+  }
+
+  // Negative Value Validation
+  if (formData.shipment_quantity < 0) {
+    alert("Shipment Quantity cannot be negative");
+    return;
+  }
+
+  if (formData.unit_price < 0) {
+    alert("Unit Price cannot be negative");
+    return;
+  }
+
+  if (formData.lead_time < 0) {
+    alert("Lead Time cannot be negative");
+    return;
+  }
+
+  if (formData.stock_quantity < 0) {
+    alert("Stock Quantity cannot be negative");
+    return;
+  }
+
+  if (formData.shipment_value < 0) {
+    alert("Shipment Value cannot be negative");
+    return;
+  }
+
+  if (formData.supplier_avg_delay < 0) {
+    alert("Supplier Average Delay cannot be negative");
+    return;
+  }
+
+  // Rating Validation
+  if (formData.rating < 0 || formData.rating > 5) {
+    alert("Rating must be between 0 and 5");
+    return;
+  }
+
+  // API Call
+ try {
+  setLoading(true);
+
+  const response = await axios.post(
+    "http://127.0.0.1:8000/predict",
+    formData
+  );
+
+  setResult(response.data);
+
+} catch (error) {
+  console.error(error);
+  alert("Prediction failed. Please try again.");
+} finally {
+  setLoading(false);
+}
   };
 
   return (
@@ -93,9 +178,9 @@ function PredictionForm() {
           onChange={handleChange}
         />
 
-        <button type="submit">
-          Predict
-        </button>
+       <button type="submit" disabled={loading}>
+  {loading ? "Predicting..." : "Predict"}
+</button>
 
       </form>
 

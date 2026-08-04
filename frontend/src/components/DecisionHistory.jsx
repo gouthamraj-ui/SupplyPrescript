@@ -17,35 +17,37 @@ function DecisionHistory() {
     }
   };
 
-  return (
+   return (
     <div className="history-card">
       <h2>Decision History</h2>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Prediction</th>
-            <th>Recommendation</th>
-            <th>Saving</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {decisions.map((item) => (
-            <tr key={item.decision_id}>
-              <td>{item.decision_id}</td>
-              <td>{item.prediction}</td>
-              <td>{item.recommended_action}</td>
-              <td>₹{item.estimated_saving}</td>
-              <td>
-                {new Date(item.created_at).toLocaleDateString()}
-              </td>
+      {decisions.length === 0 ? (
+        <p>No decision history available.</p>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Prediction</th>
+              <th>Recommendation</th>
+              <th>Saving</th>
+              <th>Date</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {decisions.map((item) => (
+              <tr key={item.decision_id}>
+                <td>{item.decision_id}</td>
+                <td>{item.prediction}</td>
+                <td>{item.recommended_action}</td>
+                <td>₹{item.estimated_saving}</td>
+                <td>{new Date(item.created_at).toLocaleDateString()}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 }

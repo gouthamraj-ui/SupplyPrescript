@@ -9,8 +9,11 @@ function App() {
   return (
     <div className="App">
       <div className="dashboard">
-        <h1>SupplyPrescript Dashboard</h1>
-        <p>Predict Supply Chain Shipment Delays</p>
+
+        <div className="dashboard-header">
+          <h1>🚚 SupplyPrescript</h1>
+          <p>Closed-Loop Prescriptive Analytics Dashboard</p>
+        </div>
 
         <AnalyticsCard />
 
@@ -24,6 +27,7 @@ function App() {
         <DecisionHistory />
 
         <OutcomeForm />
+
       </div>
     </div>
   );

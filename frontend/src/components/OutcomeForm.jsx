@@ -20,10 +20,7 @@ function OutcomeForm() {
     e.preventDefault();
 
     try {
-      await axios.post(
-        "http://127.0.0.1:8000/outcomes",
-        formData
-      );
+      await axios.post("http://127.0.0.1:8000/outcomes", formData);
 
       alert("Outcome saved successfully!");
 
@@ -33,7 +30,6 @@ function OutcomeForm() {
         actual_delay: "",
         comments: "",
       });
-
     } catch (error) {
       console.error(error);
       alert("Error saving outcome");
@@ -45,7 +41,6 @@ function OutcomeForm() {
       <h2>Record Outcome</h2>
 
       <form onSubmit={handleSubmit}>
-
         <label>Decision ID</label>
         <input
           type="number"
@@ -82,10 +77,7 @@ function OutcomeForm() {
           onChange={handleChange}
         />
 
-        <button type="submit">
-          Save Outcome
-        </button>
-
+        <button type="submit">Save Outcome</button>
       </form>
     </div>
   );
