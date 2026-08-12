@@ -3,10 +3,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import joblib
 import pandas as pd
+
 from backend.db_connection import get_connection
 from backend.recommendation import get_recommendation
+from backend.optimizer import optimize_shipment
+
 
 app = FastAPI()
+
+
+# =========================================================
+# CORS
+# =========================================================
 
 app.add_middleware(
     CORSMiddleware,
@@ -16,8 +24,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+# =========================================================
+# LOAD ML MODEL
+# =========================================================
+
 model = joblib.load("models/optimized_random_forest.pkl")
 
+
+# =========================================================
+# REQUEST MODELS
+# =========================================================
 
 class Shipment(BaseModel):
     shipment_quantity: int
@@ -28,6 +45,7 @@ class Shipment(BaseModel):
     shipment_value: float
     supplier_avg_delay: float
 
+
 class OutcomeRequest(BaseModel):
     decision_id: int
     outcome_status: str
@@ -35,12 +53,25 @@ class OutcomeRequest(BaseModel):
     comments: str
 
 
+class DecisionRequest(BaseModel):
+    decision_id: int
+    action_taken: str
+
+
+# =========================================================
+# HOME API
+# =========================================================
+
 @app.get("/")
 def home():
-    return {"message": "SupplyPrescript API is Running"}
+    return {
+        "message": "SupplyPrescript API is Running"
+    }
 
 
-# --------------------- Health API ---------------------
+# =========================================================
+# HEALTH API
+# =========================================================
 
 @app.get("/health")
 def health():
@@ -50,7 +81,9 @@ def health():
     }
 
 
-# -------------------- Recommendations API --------------------
+# =========================================================
+# RECOMMENDATIONS API
+# =========================================================
 
 recommendations = [
     {
@@ -71,7 +104,9 @@ def get_recommendations():
     return recommendations
 
 
-# -------------------- Model Info API --------------------
+# =========================================================
+# MODEL INFO API
+# =========================================================
 
 @app.get("/model-info")
 def model_info():
@@ -90,119 +125,346 @@ def model_info():
     }
 
 
-# -------------------- Prediction API --------------------
+# =========================================================
+# PREDICTION API
+# =========================================================
 
 @app.post("/predict")
 def predict(data: Shipment):
 
-    sample = pd.DataFrame([{
-        "shipment_quantity": data.shipment_quantity,
-        "unit_price": data.unit_price,
-        "lead_time": data.lead_time,
-        "stock_quantity": data.stock_quantity,
-        "rating": data.rating,
-        "shipment_value": data.shipment_value,
-        "supplier_avg_delay": data.supplier_avg_delay
-    }])
+    try:
 
-    prediction = model.predict(sample)[0]
-    probability = model.predict_proba(sample)[0][1]
+        # -------------------------------------------------
+        # Prepare input data
+        # -------------------------------------------------
 
-    delay_probability = round(float(probability), 4)
-    confidence = round(float(probability * 100), 2)
+        sample = pd.DataFrame([{
+            "shipment_quantity": data.shipment_quantity,
+            "unit_price": data.unit_price,
+            "lead_time": data.lead_time,
+            "stock_quantity": data.stock_quantity,
+            "rating": data.rating,
+            "shipment_value": data.shipment_value,
+            "supplier_avg_delay": data.supplier_avg_delay
+        }])
 
-    recommendation = get_recommendation(
-        prediction,
-        data.supplier_avg_delay,
-        data.stock_quantity,
-        data.lead_time,
-        data.rating
-    )
 
-    # ---------------- Save Prediction ----------------
+        # -------------------------------------------------
+        # ML Prediction
+        # -------------------------------------------------
 
-    conn = get_connection()
-    cursor = conn.cursor()
+        prediction = model.predict(sample)[0]
 
-    query = """
-    INSERT INTO predict_decisions (
-        shipment_quantity,
-        unit_price,
-        lead_time,
-        stock_quantity,
-        rating,
-        shipment_value,
-        supplier_avg_delay,
-        prediction,
-        delay_probability,
-        confidence,
-        recommended_action,
-        estimated_saving
-    )
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    """
+        probability = model.predict_proba(sample)[0][1]
 
-    values = (
-        data.shipment_quantity,
-        data.unit_price,
-        data.lead_time,
-        data.stock_quantity,
-        data.rating,
-        data.shipment_value,
-        data.supplier_avg_delay,
-        "Delayed" if prediction == 1 else "On Time",
-        delay_probability,
-        confidence,
-        recommendation["recommended_action"],
-        recommendation["estimated_saving"]
-    )
+        delay_probability = round(float(probability), 4)
 
-    cursor.execute(query, values)
-    conn.commit()
+        confidence = round(
+            float(probability * 100),
+            2
+        )
 
-    cursor.close()
-    conn.close()
 
-    # ---------------- API Response ----------------
+        # -------------------------------------------------
+        # Recommendation
+        # -------------------------------------------------
 
-    return {
-        "prediction": "Delayed" if prediction == 1 else "On Time",
-        "delay_probability": delay_probability,
-        "confidence": confidence,
-        "recommended_action": recommendation["recommended_action"],
-        "estimated_saving": recommendation["estimated_saving"]
-    }
+        recommendation = get_recommendation(
+            prediction,
+            data.supplier_avg_delay,
+            data.stock_quantity,
+            data.lead_time,
+            data.rating
+        )
 
-# -------------------- Decision History API --------------------
+
+        # -------------------------------------------------
+        # PuLP Optimization
+        # -------------------------------------------------
+
+        optimization = optimize_shipment(
+            shipment_value=data.shipment_value,
+            lead_time=data.lead_time,
+            stock_quantity=data.stock_quantity,
+            supplier_avg_delay=data.supplier_avg_delay
+        )
+
+
+        # -------------------------------------------------
+        # Save Prediction
+        # -------------------------------------------------
+
+        conn = get_connection()
+        cursor = conn.cursor()
+
+        query = """
+        INSERT INTO predict_decisions (
+            shipment_quantity,
+            unit_price,
+            lead_time,
+            stock_quantity,
+            rating,
+            shipment_value,
+            supplier_avg_delay,
+            prediction,
+            delay_probability,
+            confidence,
+            recommended_action,
+            estimated_saving
+        )
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+
+        values = (
+            data.shipment_quantity,
+            data.unit_price,
+            data.lead_time,
+            data.stock_quantity,
+            data.rating,
+            data.shipment_value,
+            data.supplier_avg_delay,
+            "Delayed" if prediction == 1 else "On Time",
+            delay_probability,
+            confidence,
+            recommendation["recommended_action"],
+            recommendation["estimated_saving"]
+        )
+
+        cursor.execute(query, values)
+
+        conn.commit()
+
+        cursor.close()
+        conn.close()
+
+
+        # -------------------------------------------------
+        # API Response
+        # -------------------------------------------------
+
+        return {
+            "prediction": (
+                "Delayed"
+                if prediction == 1
+                else "On Time"
+            ),
+
+            "delay_probability": delay_probability,
+
+            "confidence": confidence,
+
+            "recommended_action": (
+                recommendation["recommended_action"]
+            ),
+
+            "estimated_saving": (
+                recommendation["estimated_saving"]
+            ),
+
+            "optimized_action": (
+                optimization["best_action"]
+            ),
+
+            "optimized_cost": (
+                optimization["best_cost"]
+            ),
+
+            "optimized_delay_days": (
+                optimization["best_delay_days"]
+            ),
+
+            "optimized_risk": (
+                optimization["best_risk"]
+            ),
+
+            "alternatives": (
+                optimization["alternatives"]
+            )
+        }
+
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+
+# =========================================================
+# GET DECISION HISTORY
+# =========================================================
 
 @app.get("/decisions")
 def get_decisions():
+
+    conn = None
+    cursor = None
+
     try:
+
         conn = get_connection()
-        cursor = conn.cursor(dictionary=True)
+
+        cursor = conn.cursor(
+            dictionary=True
+        )
 
         cursor.execute("""
-            SELECT *
+            SELECT
+                decision_id,
+                shipment_quantity,
+                unit_price,
+                lead_time,
+                stock_quantity,
+                rating,
+                shipment_value,
+                supplier_avg_delay,
+                prediction,
+                delay_probability,
+                confidence,
+                recommended_action,
+                estimated_saving,
+                action_taken,
+                created_at
             FROM predict_decisions
             ORDER BY created_at DESC
         """)
 
         decisions = cursor.fetchall()
 
-        cursor.close()
-        conn.close()
-
         return decisions
 
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conn:
+            conn.close()
+
+
+# =========================================================
+# EXECUTE DECISION
+# =========================================================
+
+@app.post("/decisions")
+def execute_decision(
+    data: DecisionRequest
+):
+
+    conn = None
+    cursor = None
+
+    try:
+
+        conn = get_connection()
+
+        cursor = conn.cursor()
+
+
+        # -------------------------------------------------
+        # Check whether decision exists
+        # -------------------------------------------------
+
+        cursor.execute(
+            """
+            SELECT decision_id
+            FROM predict_decisions
+            WHERE decision_id = %s
+            """,
+            (data.decision_id,)
+        )
+
+        decision = cursor.fetchone()
+
+
+        if not decision:
+
+            raise HTTPException(
+                status_code=404,
+                detail="Decision not found"
+            )
+
+
+        # -------------------------------------------------
+        # Save selected action
+        # -------------------------------------------------
+
+        cursor.execute(
+            """
+            UPDATE predict_decisions
+            SET action_taken = %s
+            WHERE decision_id = %s
+            """,
+            (
+                data.action_taken,
+                data.decision_id
+            )
+        )
+
+
+        conn.commit()
+
+
+        return {
+            "message": "Decision executed successfully",
+            "decision_id": data.decision_id,
+            "action_taken": data.action_taken
+        }
+
+
+    except HTTPException:
+
+        raise
+
+
+    except Exception as e:
+
+        if conn:
+            conn.rollback()
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conn:
+            conn.close()
+
+
+# =========================================================
+# SAVE OUTCOME
+# =========================================================
 
 @app.post("/outcomes")
-def save_outcome(data: OutcomeRequest):
+def save_outcome(
+    data: OutcomeRequest
+):
+
+    conn = None
+    cursor = None
+
     try:
+
         conn = get_connection()
+
         cursor = conn.cursor()
+
 
         query = """
         INSERT INTO post_outcomes
@@ -215,6 +477,7 @@ def save_outcome(data: OutcomeRequest):
         VALUES (%s, %s, %s, %s)
         """
 
+
         values = (
             data.decision_id,
             data.outcome_status,
@@ -222,24 +485,58 @@ def save_outcome(data: OutcomeRequest):
             data.comments
         )
 
-        cursor.execute(query, values)
+
+        cursor.execute(
+            query,
+            values
+        )
+
         conn.commit()
 
-        cursor.close()
-        conn.close()
 
         return {
             "message": "Outcome saved successfully"
         }
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
 
+
+    except Exception as e:
+
+        if conn:
+            conn.rollback()
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conn:
+            conn.close()
+
+
+# =========================================================
+# GET OUTCOMES
+# =========================================================
 
 @app.get("/outcomes")
 def get_outcomes():
+
+    conn = None
+    cursor = None
+
     try:
+
         conn = get_connection()
-        cursor = conn.cursor(dictionary=True)
+
+        cursor = conn.cursor(
+            dictionary=True
+        )
+
 
         cursor.execute("""
             SELECT
@@ -257,18 +554,25 @@ def get_outcomes():
             ORDER BY o.recorded_at DESC
         """)
 
+
         outcomes = cursor.fetchall()
 
-        cursor.close()
-        conn.close()
 
         return outcomes
 
+
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
 
 
+    finally:
 
+        if cursor:
+            cursor.close()
 
-
-
+        if conn:
+            conn.close()
