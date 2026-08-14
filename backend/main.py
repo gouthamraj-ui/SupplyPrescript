@@ -45,11 +45,18 @@ class Shipment(BaseModel):
     shipment_value: float
     supplier_avg_delay: float
 
+class OptimizationRequest(BaseModel):
+    shipment_value: float
+    lead_time: float
+    stock_quantity: int
+    supplier_avg_delay: float
+
 
 class OutcomeRequest(BaseModel):
     decision_id: int
     outcome_status: str
     actual_delay: float
+    actual_cost: float
     comments: str
 
 
@@ -124,6 +131,55 @@ def model_info():
         ]
     }
 
+# =========================================================
+# DECISION ROI ANALYTICS
+# =========================================================
+
+@app.get("/analytics/decision-roi")
+def get_decision_roi():
+
+    conn = None
+    cursor = None
+
+    try:
+        conn = get_connection()
+
+        cursor = conn.cursor(dictionary=True)
+
+        cursor.execute("""
+            SELECT
+                COUNT(*) AS total_decisions,
+                COALESCE(SUM(estimated_saving), 0) AS total_estimated_saving,
+                COALESCE(AVG(estimated_saving), 0) AS average_estimated_saving
+            FROM predict_decisions
+        """)
+
+        result = cursor.fetchone()
+
+        return {
+            "total_decisions": result["total_decisions"] or 0,
+            "total_estimated_saving": float(
+                result["total_estimated_saving"] or 0
+            ),
+            "average_estimated_saving": float(
+                result["average_estimated_saving"] or 0
+            )
+        }
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
+
+    finally:
+
+        if cursor:
+            cursor.close()
+
+        if conn:
+            conn.close()
 
 # =========================================================
 # PREDICTION API
@@ -290,7 +346,28 @@ def predict(data: Shipment):
             detail=str(e)
         )
 
+# -------------------- Optimization API --------------------
 
+@app.post("/optimize")
+def optimize(data: OptimizationRequest):
+
+    try:
+
+        result = optimize_shipment(
+            shipment_value=data.shipment_value,
+            lead_time=data.lead_time,
+            stock_quantity=data.stock_quantity,
+            supplier_avg_delay=data.supplier_avg_delay
+        )
+
+        return result
+
+    except Exception as e:
+
+        raise HTTPException(
+            status_code=500,
+            detail=str(e)
+        )
 # =========================================================
 # GET DECISION HISTORY
 # =========================================================
@@ -452,19 +529,68 @@ def execute_decision(
 # =========================================================
 
 @app.post("/outcomes")
-def save_outcome(
-    data: OutcomeRequest
-):
-
-    conn = None
-    cursor = None
+def save_outcome(data: OutcomeRequest):
 
     try:
 
         conn = get_connection()
+        cursor = conn.cursor(dictionary=True)
 
-        cursor = conn.cursor()
+        # -----------------------------------------
+        # Get original decision
+        # -----------------------------------------
 
+        cursor.execute(
+            """
+            SELECT
+                decision_id,
+                estimated_saving
+            FROM predict_decisions
+            WHERE decision_id = %s
+            """,
+            (data.decision_id,)
+        )
+
+        decision = cursor.fetchone()
+
+        if not decision:
+            cursor.close()
+            conn.close()
+
+            raise HTTPException(
+                status_code=404,
+                detail="Decision not found."
+            )
+
+        estimated_saving = float(
+            decision["estimated_saving"] or 0
+        )
+
+        actual_cost = float(data.actual_cost)
+
+        # -----------------------------------------
+        # Calculate actual saving
+        # -----------------------------------------
+
+        actual_saving = estimated_saving - actual_cost
+
+        # -----------------------------------------
+        # Calculate ROI
+        # -----------------------------------------
+
+        if actual_cost > 0:
+
+            roi_percentage = (
+                actual_saving / actual_cost
+            ) * 100
+
+        else:
+
+            roi_percentage = 0
+
+        # -----------------------------------------
+        # Insert outcome
+        # -----------------------------------------
 
         query = """
         INSERT INTO post_outcomes
@@ -472,51 +598,69 @@ def save_outcome(
             decision_id,
             outcome_status,
             actual_delay,
-            comments
+            comments,
+            actual_cost,
+            actual_saving,
+            roi_percentage
         )
-        VALUES (%s, %s, %s, %s)
+        VALUES
+        (
+            %s,
+            %s,
+            %s,
+            %s,
+            %s,
+            %s,
+            %s
+        )
         """
-
 
         values = (
             data.decision_id,
             data.outcome_status,
             data.actual_delay,
-            data.comments
+            data.comments,
+            actual_cost,
+            actual_saving,
+            roi_percentage
         )
 
-
-        cursor.execute(
-            query,
-            values
-        )
+        cursor.execute(query, values)
 
         conn.commit()
 
+        cursor.close()
+        conn.close()
 
         return {
-            "message": "Outcome saved successfully"
+            "message": "Outcome saved successfully",
+
+            "decision_id": data.decision_id,
+
+            "estimated_saving": estimated_saving,
+
+            "actual_cost": actual_cost,
+
+            "actual_saving": round(
+                actual_saving,
+                2
+            ),
+
+            "roi_percentage": round(
+                roi_percentage,
+                2
+            )
         }
 
+    except HTTPException:
+        raise
 
     except Exception as e:
-
-        if conn:
-            conn.rollback()
 
         raise HTTPException(
             status_code=500,
             detail=str(e)
         )
-
-
-    finally:
-
-        if cursor:
-            cursor.close()
-
-        if conn:
-            conn.close()
 
 
 # =========================================================
@@ -537,29 +681,36 @@ def get_outcomes():
             dictionary=True
         )
 
-
         cursor.execute("""
             SELECT
                 o.outcome_id,
                 o.decision_id,
+
                 d.prediction,
                 d.recommended_action,
+                d.estimated_saving,
+
                 o.outcome_status,
                 o.actual_delay,
+
+                o.actual_cost,
+                o.actual_saving,
+                o.roi_percentage,
+
                 o.comments,
                 o.recorded_at
+
             FROM post_outcomes o
+
             JOIN predict_decisions d
                 ON o.decision_id = d.decision_id
+
             ORDER BY o.recorded_at DESC
         """)
 
-
         outcomes = cursor.fetchall()
 
-
         return outcomes
-
 
     except Exception as e:
 
@@ -567,7 +718,6 @@ def get_outcomes():
             status_code=500,
             detail=str(e)
         )
-
 
     finally:
 

@@ -1,84 +1,189 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-function OutcomeForm() {
+function OutcomeForm({ decisionId, onSaved }) {
+
   const [formData, setFormData] = useState({
-    decision_id: "",
-    outcome_status: "Success",
+    outcome_status: "",
     actual_delay: "",
-    comments: "",
+    comments: ""
   });
+
+  const [saving, setSaving] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await axios.post("http://127.0.0.1:8000/outcomes", formData);
+    if (!decisionId) {
+      alert("Please select a decision.");
+      return;
+    }
 
-      alert("Outcome saved successfully!");
+    try {
+
+      setSaving(true);
+
+      await axios.post(
+        "http://127.0.0.1:8000/outcomes",
+        {
+          decision_id: Number(decisionId),
+          outcome_status: formData.outcome_status,
+          actual_delay: Number(formData.actual_delay),
+          comments: formData.comments
+        }
+      );
+
+      alert("✅ Outcome recorded successfully!");
 
       setFormData({
-        decision_id: "",
-        outcome_status: "Success",
+        outcome_status: "",
         actual_delay: "",
-        comments: "",
+        comments: ""
       });
+
+      if (onSaved) {
+        onSaved();
+      }
+
     } catch (error) {
-      console.error(error);
-      alert("Error saving outcome");
+
+      console.error("Outcome error:", error);
+
+      alert(
+        error.response?.data?.detail ||
+        "Failed to save outcome."
+      );
+
+    } finally {
+      setSaving(false);
     }
   };
 
   return (
-    <div className="history-card">
-      <h2>Record Outcome</h2>
+    <div className="outcome-form">
+
+      <div className="outcome-header">
+
+        <div>
+          <h2>📊 Record Actual Outcome</h2>
+
+          <p>
+            Compare the AI prediction with the real-world result.
+          </p>
+        </div>
+
+        <div className="outcome-decision">
+          Decision #{decisionId}
+        </div>
+
+      </div>
+
 
       <form onSubmit={handleSubmit}>
-        <label>Decision ID</label>
-        <input
-          type="number"
-          name="decision_id"
-          value={formData.decision_id}
-          onChange={handleChange}
-          required
-        />
 
-        <label>Outcome Status</label>
-        <select
-          name="outcome_status"
-          value={formData.outcome_status}
-          onChange={handleChange}
+        <div className="outcome-grid">
+
+          {/* STATUS */}
+
+          <div className="outcome-field">
+
+            <label>
+              Outcome Status
+            </label>
+
+            <select
+              name="outcome_status"
+              value={formData.outcome_status}
+              onChange={handleChange}
+              required
+            >
+
+              <option value="">
+                Select Outcome
+              </option>
+
+              <option value="Success">
+                ✅ Success
+              </option>
+
+              <option value="Partial Success">
+                🟡 Partial Success
+              </option>
+
+              <option value="Failed">
+                ❌ Failed
+              </option>
+
+            </select>
+
+          </div>
+
+
+          {/* ACTUAL DELAY */}
+
+          <div className="outcome-field">
+
+            <label>
+              Actual Delay (Days)
+            </label>
+
+            <input
+              type="number"
+              name="actual_delay"
+              min="0"
+              step="0.1"
+              placeholder="e.g. 5"
+              value={formData.actual_delay}
+              onChange={handleChange}
+              required
+            />
+
+          </div>
+
+
+          {/* COMMENTS */}
+
+          <div className="outcome-field full-width">
+
+            <label>
+              Comments
+            </label>
+
+            <textarea
+              name="comments"
+              rows="3"
+              placeholder="Describe what actually happened..."
+              value={formData.comments}
+              onChange={handleChange}
+            />
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="submit"
+          className="outcome-submit"
+          disabled={saving}
         >
-          <option value="Success">Success</option>
-          <option value="Failure">Failure</option>
-        </select>
 
-        <label>Actual Delay (Days)</label>
-        <input
-          type="number"
-          step="0.1"
-          name="actual_delay"
-          value={formData.actual_delay}
-          onChange={handleChange}
-        />
+          {saving
+            ? "⏳ Saving Outcome..."
+            : "💾 Record Outcome"
+          }
 
-        <label>Comments</label>
-        <textarea
-          name="comments"
-          rows="3"
-          value={formData.comments}
-          onChange={handleChange}
-        />
+        </button>
 
-        <button type="submit">Save Outcome</button>
       </form>
+
     </div>
   );
 }

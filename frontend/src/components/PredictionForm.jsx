@@ -2,7 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import ResultCard from "./ResultCard";
 
-function PredictionForm() {
+function PredictionForm({ onPredictionData }) {
+
   const [formData, setFormData] = useState({
     shipment_quantity: "",
     unit_price: "",
@@ -17,175 +18,333 @@ function PredictionForm() {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: Number(e.target.value)
-    });
+
+    const { name, value } = e.target;
+
+    setFormData((previous) => ({
+      ...previous,
+      [name]: value === "" ? "" : Number(value)
+    }));
   };
+
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
 
-  // Required Field Validation
-  if (!formData.shipment_quantity) {
-    alert("Shipment Quantity is required");
-    return;
-  }
+    e.preventDefault();
 
-  if (!formData.unit_price) {
-    alert("Unit Price is required");
-    return;
-  }
+    // Required validation
+    const requiredFields = [
+      ["shipment_quantity", "Shipment Quantity"],
+      ["unit_price", "Unit Price"],
+      ["lead_time", "Lead Time"],
+      ["stock_quantity", "Stock Quantity"],
+      ["rating", "Rating"],
+      ["shipment_value", "Shipment Value"],
+      ["supplier_avg_delay", "Supplier Average Delay"]
+    ];
 
-  if (!formData.lead_time) {
-    alert("Lead Time is required");
-    return;
-  }
+    for (const [field, label] of requiredFields) {
 
-  if (!formData.stock_quantity) {
-    alert("Stock Quantity is required");
-    return;
-  }
+      if (
+        formData[field] === "" ||
+        formData[field] === null ||
+        formData[field] === undefined
+      ) {
+        alert(`${label} is required`);
+        return;
+      }
+    }
 
-  if (!formData.rating) {
-    alert("Rating is required");
-    return;
-  }
 
-  if (!formData.shipment_value) {
-    alert("Shipment Value is required");
-    return;
-  }
+    // Negative validation
+    if (formData.shipment_quantity < 0) {
+      alert("Shipment Quantity cannot be negative");
+      return;
+    }
 
-  if (!formData.supplier_avg_delay) {
-    alert("Supplier Average Delay is required");
-    return;
-  }
+    if (formData.unit_price < 0) {
+      alert("Unit Price cannot be negative");
+      return;
+    }
 
-  // Negative Value Validation
-  if (formData.shipment_quantity < 0) {
-    alert("Shipment Quantity cannot be negative");
-    return;
-  }
+    if (formData.lead_time < 0) {
+      alert("Lead Time cannot be negative");
+      return;
+    }
 
-  if (formData.unit_price < 0) {
-    alert("Unit Price cannot be negative");
-    return;
-  }
+    if (formData.stock_quantity < 0) {
+      alert("Stock Quantity cannot be negative");
+      return;
+    }
 
-  if (formData.lead_time < 0) {
-    alert("Lead Time cannot be negative");
-    return;
-  }
+    if (formData.shipment_value < 0) {
+      alert("Shipment Value cannot be negative");
+      return;
+    }
 
-  if (formData.stock_quantity < 0) {
-    alert("Stock Quantity cannot be negative");
-    return;
-  }
+    if (formData.supplier_avg_delay < 0) {
+      alert("Supplier Average Delay cannot be negative");
+      return;
+    }
 
-  if (formData.shipment_value < 0) {
-    alert("Shipment Value cannot be negative");
-    return;
-  }
 
-  if (formData.supplier_avg_delay < 0) {
-    alert("Supplier Average Delay cannot be negative");
-    return;
-  }
+    // Rating validation
+    if (formData.rating < 0 || formData.rating > 5) {
+      alert("Rating must be between 0 and 5");
+      return;
+    }
 
-  // Rating Validation
-  if (formData.rating < 0 || formData.rating > 5) {
-    alert("Rating must be between 0 and 5");
-    return;
-  }
 
-  // API Call
- try {
-  setLoading(true);
+    // API
+    try {
 
-  const response = await axios.post(
-    "http://127.0.0.1:8000/predict",
-    formData
-  );
+      setLoading(true);
 
-  setResult(response.data);
+      const response = await axios.post(
+        "http://127.0.0.1:8000/predict",
+        formData
+      );
 
-} catch (error) {
-  console.error(error);
-  alert("Prediction failed. Please try again.");
-} finally {
-  setLoading(false);
-}
+      console.log("Prediction Result:", response.data);
+
+      setResult(response.data);
+
+
+      // Send shipment data to OptimizationPanel
+      if (onPredictionData) {
+
+        onPredictionData({
+          shipment_quantity: Number(formData.shipment_quantity),
+          unit_price: Number(formData.unit_price),
+          lead_time: Number(formData.lead_time),
+          stock_quantity: Number(formData.stock_quantity),
+          rating: Number(formData.rating),
+          shipment_value: Number(formData.shipment_value),
+          supplier_avg_delay: Number(formData.supplier_avg_delay)
+        });
+
+      }
+
+    } catch (error) {
+
+      console.error("Prediction Error:", error);
+
+      alert("Prediction failed. Please try again.");
+
+    } finally {
+
+      setLoading(false);
+
+    }
+
   };
 
+
   return (
-    <>
-      <form onSubmit={handleSubmit}>
 
-        <label>Shipment Quantity</label>
-        <input
-          type="number"
-          name="shipment_quantity"
-          value={formData.shipment_quantity}
-          onChange={handleChange}
-        />
+    <div className="prediction-section">
 
-        <label>Unit Price</label>
-        <input
-          type="number"
-          name="unit_price"
-          value={formData.unit_price}
-          onChange={handleChange}
-        />
+      {/* =====================================
+          LEFT - SHIPMENT RISK PREDICTION
+      ====================================== */}
 
-        <label>Lead Time</label>
-        <input
-          type="number"
-          name="lead_time"
-          value={formData.lead_time}
-          onChange={handleChange}
-        />
+      <div className="prediction-card">
 
-        <label>Stock Quantity</label>
-        <input
-          type="number"
-          name="stock_quantity"
-          value={formData.stock_quantity}
-          onChange={handleChange}
-        />
+        <div className="prediction-card-header">
 
-        <label>Rating</label>
-        <input
-          type="number"
-          name="rating"
-          value={formData.rating}
-          onChange={handleChange}
-        />
+          <div className="prediction-card-icon">
+            📦
+          </div>
 
-        <label>Shipment Value</label>
-        <input
-          type="number"
-          name="shipment_value"
-          value={formData.shipment_value}
-          onChange={handleChange}
-        />
+          <div>
 
-        <label>Supplier Average Delay</label>
-        <input
-          type="number"
-          name="supplier_avg_delay"
-          value={formData.supplier_avg_delay}
-          onChange={handleChange}
-        />
+            <h2>Shipment Risk Prediction</h2>
 
-       <button type="submit" disabled={loading}>
-  {loading ? "Predicting..." : "Predict"}
-</button>
+            <p>
+              Enter shipment details to predict delay risk
+            </p>
 
-      </form>
+          </div>
 
-      <ResultCard result={result} />
-    </>
+        </div>
+
+
+        <form
+          className="prediction-form"
+          onSubmit={handleSubmit}
+        >
+
+          <div className="prediction-fields">
+
+
+            {/* Shipment Quantity */}
+
+            <div className="prediction-field">
+
+              <label>
+                Shipment Quantity
+              </label>
+
+              <input
+                type="number"
+                name="shipment_quantity"
+                value={formData.shipment_quantity}
+                onChange={handleChange}
+                placeholder="e.g. 500"
+              />
+
+            </div>
+
+
+            {/* Unit Price */}
+
+            <div className="prediction-field">
+
+              <label>
+                Unit Price (₹)
+              </label>
+
+              <input
+                type="number"
+                name="unit_price"
+                value={formData.unit_price}
+                onChange={handleChange}
+                placeholder="e.g. 300"
+              />
+
+            </div>
+
+
+            {/* Lead Time */}
+
+            <div className="prediction-field">
+
+              <label>
+                Lead Time (days)
+              </label>
+
+              <input
+                type="number"
+                name="lead_time"
+                value={formData.lead_time}
+                onChange={handleChange}
+                placeholder="e.g. 20"
+              />
+
+            </div>
+
+
+            {/* Stock Quantity */}
+
+            <div className="prediction-field">
+
+              <label>
+                Stock Quantity
+              </label>
+
+              <input
+                type="number"
+                name="stock_quantity"
+                value={formData.stock_quantity}
+                onChange={handleChange}
+                placeholder="e.g. 800"
+              />
+
+            </div>
+
+
+            {/* Rating */}
+
+            <div className="prediction-field">
+
+              <label>
+                Rating (1-5)
+              </label>
+
+              <input
+                type="number"
+                name="rating"
+                value={formData.rating}
+                onChange={handleChange}
+                placeholder="e.g. 4.2"
+                step="0.1"
+                min="0"
+                max="5"
+              />
+
+            </div>
+
+
+            {/* Supplier Delay */}
+
+            <div className="prediction-field">
+
+              <label>
+                Supplier Avg Delay (days)
+              </label>
+
+              <input
+                type="number"
+                name="supplier_avg_delay"
+                value={formData.supplier_avg_delay}
+                onChange={handleChange}
+                placeholder="e.g. 5.3"
+              />
+
+            </div>
+
+
+            {/* Shipment Value */}
+
+            <div className="prediction-field shipment-value-field">
+
+              <label>
+                Shipment Value (₹)
+              </label>
+
+              <input
+                type="number"
+                name="shipment_value"
+                value={formData.shipment_value}
+                onChange={handleChange}
+                placeholder="e.g. 150000"
+              />
+
+            </div>
+
+          </div>
+
+
+          <button
+            type="submit"
+            className="predict-button"
+            disabled={loading}
+          >
+
+            {loading
+              ? "⏳ Predicting..."
+              : "🔮 Predict Shipment Risk"
+            }
+
+          </button>
+
+        </form>
+
+      </div>
+
+
+      {/* =====================================
+          RIGHT - PREDICTION RESULT
+      ====================================== */}
+
+      <div className="prediction-result-wrapper">
+
+        <ResultCard result={result} />
+
+      </div>
+
+    </div>
+
   );
 }
 
