@@ -65,3 +65,10 @@ Thumbs.db
 *.tmp
 *.temp
 *.bak
+# =========================================================
+# Unused Frontend Files
+# =========================================================
+
+frontend/README.md
+frontend/public/
+frontend/src/assets/
