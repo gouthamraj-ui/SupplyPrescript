@@ -105,7 +105,7 @@ function PredictionForm({ onPredictionData }) {
         formData
       );
 
-      console.log("Prediction Result:", response.data);
+  
 
       setResult(response.data);
 

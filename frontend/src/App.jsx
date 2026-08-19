@@ -11,59 +11,135 @@ import OptimizationPanel from "./components/OptimizationPanel";
 
 import "./App.css";
 
+
 function App() {
+
+  // =========================================================
+  // SHIPMENT DATA
+  // =========================================================
 
   const [shipmentData, setShipmentData] = useState(null);
 
+
+  // =========================================================
+  // SELECTED DECISION
+  // =========================================================
+
+  const [selectedDecisionId, setSelectedDecisionId] =
+    useState(null);
+   
+    const [outcomeRefresh, setOutcomeRefresh] = useState(0);
+
+
+  // =========================================================
+  // APP
+  // =========================================================
+
   return (
+
     <div className="App">
+
       <div className="dashboard">
 
-        {/* Dashboard Header */}
+
+        {/* =====================================================
+            DASHBOARD HEADER
+        ===================================================== */}
+
         <div className="dashboard-header">
-          <h1>🚚 SupplyPrescript</h1>
-          <p>Closed-Loop Prescriptive Analytics Dashboard</p>
+
+          <h1>
+            🚚 SupplyPrescript
+          </h1>
+
+          <p>
+            Closed-Loop Prescriptive Analytics Dashboard
+          </p>
+
         </div>
 
-        {/* Analytics */}
-        <AnalyticsCard />
 
-        {/* Prediction */}
+        {/* =====================================================
+            ANALYTICS SUMMARY
+        ===================================================== */}
+
+        <AnalyticsCard refreshTrigger={outcomeRefresh} />
+
+
+        {/* =====================================================
+            PREDICTION
+        ===================================================== */}
+
         <PredictionForm
-          onPredictionData={setShipmentData}
+          onPredictionData={
+            setShipmentData
+          }
         />
 
-        {/* Optimization */}
+
+        {/* =====================================================
+            OPTIMIZATION
+        ===================================================== */}
+
         <OptimizationPanel
-          shipmentData={shipmentData}
+          shipmentData={
+            shipmentData
+          }
         />
 
-        {/* Analytics Chart */}
-        <AnalyticsChart
-          success={8}
-          failure={2}
+
+        {/* =====================================================
+            OUTCOME ANALYTICS CHART
+        ===================================================== */}
+
+        
+        <AnalyticsChart refreshTrigger={outcomeRefresh}/>
+        
+
+
+        {/* =====================================================
+            DECISION HISTORY
+        ===================================================== */}
+
+        <DecisionHistory
+          onDecisionSelected={setSelectedDecisionId}
         />
 
-        {/* Decision History */}
-        <DecisionHistory />
 
-        {/* Outcome Form */}
+        {/* =====================================================
+            OUTCOME FORM
+        ===================================================== */}
+
         <OutcomeForm
-          decisionId={7}
-          onSaved={() => {
-            console.log("Outcome saved");
-          }}
+          decisionId={selectedDecisionId}
+          onOutcomeSaved={() =>
+            setOutcomeRefresh((value)=> value + 1)
+
+          }
         />
 
-        {/* Outcome History */}
-        <OutcomeHistory />
 
-        {/* Decision ROI */}
-        <DecisionROI />
+        {/* =====================================================
+            OUTCOME HISTORY
+        ===================================================== */}
+
+        <OutcomeHistory refreshTrigger={outcomeRefresh} />
+
+
+        {/* =====================================================
+            DECISION ROI
+        ===================================================== */}
+
+        <DecisionROI refreshTrigger={outcomeRefresh} />
+
 
       </div>
+
     </div>
+
   );
+
 }
+
 
 export default App;

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import AnalyticsChart from "./AnalyticsChart";
 import axios from "axios";
 
-function AnalyticsCard() {
+function AnalyticsCard({refreshTrigger = 0}) {
+
   const [stats, setStats] = useState({
     total: 0,
     success: 0,
@@ -10,47 +10,42 @@ function AnalyticsCard() {
     successRate: 0,
   });
 
-  useEffect(() => {
-    fetchAnalytics();
-  }, []);
+  const fetchDecisions = async () => {
 
-  const fetchAnalytics = async () => {
     try {
+
       const response = await axios.get(
-        "http://127.0.0.1:8000/outcomes"
+        "http://127.0.0.1:8000/analytics/summary"
       );
 
       const data = response.data;
 
-      const total = data.length;
-      const success = data.filter(
-        (item) => item.outcome_status === "Success"
-      ).length;
-
-      const failure = total - success;
-
-      const successRate =
-        total > 0
-          ? ((success / total) * 100).toFixed(1)
-          : 0;
-
       setStats({
-        total,
-        success,
-        failure,
-        successRate,
+        total: data.total_outcomes || 0,
+        success: data.successful_decisions || 0,
+        failure: data.failed_decisions || 0,
+        successRate: data.success_rate || 0,
       });
 
     } catch (error) {
-      console.error(error);
+
+      console.error(
+        "Analytics error:",
+        error.response?.data || error.message
+      );
+
     }
   };
+
+  useEffect(() => {
+  fetchDecisions();
+}, [refreshTrigger]);
 
   return (
     <div className="analytics-grid">
 
       <div className="analytics-card">
-        <h3>Total Decisions</h3>
+        <h3>Total Outcomes</h3>
         <h1>{stats.total}</h1>
       </div>
 
